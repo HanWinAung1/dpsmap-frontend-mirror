@@ -1,0 +1,95 @@
+.arc-gis-container {
+  width: 90%;
+
+  margin: 0px auto;
+  margin-bottom: 20px;
+  padding: 10px;
+
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.custom-heading {
+  font-family: Pyidaungsu-regular, Zawgyi-One, sans-serif;
+  padding: 20px;
+}
+
+.custom-heading .main-heading {
+  font-size: calc(20px + 0.39vw);
+  text-align: center;
+  color: var(--main-accent-color);
+  margin: 40px;
+}
+
+.custom-heading.arc .main-heading::after {
+  width: 50%;
+  content: "";
+
+  padding: 0.6px;
+  margin: 8px auto;
+  border-radius: 100%;
+  position: relative;
+  background: var(--main-accent-color);
+  opacity: 0.1;
+}
+
+.custom-spacer {
+  padding: 20px 0px;
+}
+
+.custom-spacer .custom-hr {
+  width: 80%;
+
+  padding: 1px;
+  margin: 0px auto;
+
+  background: var(--main-accent-color);
+}
+
+.how-to-use-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-to-use-container .how-to-use {
+  width: 80%;
+  margin: 20px 0px;
+}
+
+.how-to-use-container .how-to-use .custom-heading {
+  padding-top: 0px;
+}
+
+.how-to-use-container .how-to-use .custom-heading .main-heading {
+  font-family: Righteous-regular;
+  text-align: left;
+
+  margin: 10px 0px;
+}
+
+.how-to-use-container .how-to-use .custom-heading .sub-heading {
+  color: var(--font-color);
+  font-size: calc(10px + 0.39vw);
+}
+
+.how-to-use-container .how-to-use ol {
+  font-family: Pyidaungsu-regular, Zawgyi-One, sans-serif;
+  font-size: calc(10px + 0.39vw);
+  margin: 0;
+}
+
+.arc-gis-tutorial-container {
+  width: 90%;
+  height: auto;
+  margin: 20px auto;
+  padding: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.arc-gis-tutorial-container iframe {
+  width: 100%;
+  height: 655px;
+}

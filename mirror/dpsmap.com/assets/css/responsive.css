@@ -1,0 +1,406 @@
+@media only screen and (max-width: 1920px) {
+  .main-content
+    .our-services-container
+    .our-services
+    .our-services-row
+    .custom-card {
+    width: 450px !important;
+    min-width: 200px !important;
+    min-height: 300px !important;
+    margin: 10px 10px !important;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .main-content
+    .our-services-container
+    .our-services
+    .our-services-row
+    .custom-card {
+    width: 400px !important;
+    min-width: 200px !important;
+    min-height: 300px !important;
+    margin: 10px 10px !important;
+  }
+}
+
+@media only screen and (max-width: 100px) {
+  .map-overview-container .map-overview .map-overview-left,
+  .map-overview-container .map-overview .map-overview-right {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 768px){
+    .map-overview-container .map-overview .map-overview-right {
+      width: 100% !important;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+}
+@media only screen and (max-width: 480px){
+    .map-overview-container .map-overview .map-overview-right {
+      width: 100% !important;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+}
+@media only screen and (max-width: 1366px) {
+  .main-content
+    .our-services-container
+    .our-services
+    .our-services-row
+    .custom-card {
+    width: 500px !important;
+    min-width: 200px !important;
+    min-height: 300px !important;
+    margin: 10px 10px !important;
+  }
+  .main-content
+    .our-services-container
+    .our-services
+    .our-services-row
+    .our-services-right {
+    margin-top: 20px;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .map-overview-container .map-overview .map-overview-left {
+    margin-bottom: 30px;
+    justify-content: center !important;
+  }
+  .main-content .custom-row.suggestion .url-suggestion-slider .custom-card {
+    width: 30% !important;
+    margin: 10px 0px !important;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .main-content .mission .description-container .description {
+    width: 80% !important;
+  }
+  .main-content .description-container .description {
+    text-align: left !important;
+  }
+
+  .main-content .about-us-container .about-us .about-us-left {
+    width: 100% !important;
+  }
+  .main-content .about-us-container .about-us .about-us-right {
+    width: 100% !important;
+    margin-top: 70px;
+  }
+
+  .main-content
+    .our-services-container
+    .our-services
+    .our-services-row
+    .custom-card {
+    width: 480px !important;
+    min-width: 200px !important;
+    min-height: 300px !important;
+    margin: 10px 10px !important;
+  }
+
+  .fast-facts-container .fast-facts .stats-container {
+    width: 100% !important;
+  }
+  .download-section .map-download .heading {
+    margin: 20px 0px !important;
+  }
+  .download-section .map-download .download {
+    width: 100% !important;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 30px;
+  }
+
+  .download-section .map-download .download .btn-container a {
+    margin: 0px 10px !important;
+  }
+
+  .download-section .map-download .available-now {
+    width: 100% !important;
+    text-align: center;
+  }
+  .download-section .map-download .available-now .description {
+    margin-top: 40px;
+  }
+  .gis-card-view .description {
+    text-align: left !important;
+  }
+  .gis-card-view .description .description-left,
+  .gis-card-view .description .description-right {
+    width: 100% !important;
+  }
+  .gis-card-view .description .description-right {
+    margin-top: 10px !important;
+  }
+  .gis-card-view .text-dropdown .text-dropdown-left,
+  .gis-card-view .text-dropdown .text-dropdown-right {
+    width: 100% !important;
+    margin: 10px 0px !important;
+  }
+  .gis-card-view .text-dropdown .text-dropdown-left ul,
+  .gis-card-view .text-dropdown .text-dropdown-right ul {
+    padding: 0px !important;
+  }
+  .swiper-container .swiper {
+    height: fit-content !important;
+  }
+  .swiper-full-screen .swiper {
+    width: 90% !important;
+  }
+  .gis-card-view .block .three60-photos .custom-row .three60-image-container {
+    width: 100% !important;
+  }
+  .fiber-optic-cable .fiber-optic-cable-left ul {
+    padding: 0 !important;
+  }
+  .fiber-optic-cable .fiber-optic-cable-left,
+  .fiber-optic-cable-right {
+    width: 100% !important;
+  }
+  .gis-card-view .block .for-home-number .for-home-number-left,
+  .gis-card-view .block .for-home-number .for-home-number-right {
+    width: 100% !important;
+  }
+  .update-aerial .text-dropdown ul,
+  .gis-card-view .description ul,
+  .customized-map .text-dropdown ul {
+    padding: 0px !important;
+  }
+  .gis-card-view .block .aerial-photo {
+    width: 100% !important;
+  }
+  .gis-card-view .block .archipelago .custom-row .custom-card {
+    width: 100% !important;
+  }
+  .gis-card-view .block .customized-map .customized-map-left,
+  .customized-map-right {
+    width: 100% !important;
+    margin: 10px 0px !important;
+  }
+  .company-profile .company-profile-left,
+  .company-profile .company-profile-right {
+    width: 100% !important;
+    margin: 20px 0px !important;
+  }
+  .map-gallery-container .map-gallery .img-card {
+    width: 30% !important;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .header-contact {
+    display: none !important;
+  }
+  .nav {
+    display: none !important;
+  }
+  .mobile-navbar-container {
+    display: flex !important;
+  }
+  .mobile-header {
+    display: flex !important;
+  }
+  .download-container {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .custom-download-heading {
+    text-align: center !important;
+    width: 80% !important;
+  }
+  .download-form-container {
+    width: 90% !important;
+  }
+  .download-form-container form .custom-row .custom-input,
+  .download-form-container form .custom-row .custom-select {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .banner-content .heading {
+    font-size: calc(38px + 0.39vw) !important;
+  }
+  .banner-content .sub-heading {
+    font-size: calc(10px + 0.39vw) !important;
+  }
+
+  .banner-content .download-softcopy {
+    width: 80px !important;
+    height: 40px !important;
+  }
+@media (max-width: 800px) {
+  .before-footer {
+    flex: 100%;
+    display: flex !important;
+  }
+  .custom-heading.arc .main-heading::after {
+    width: 100% !important;
+  }
+  .custom-heading.PNP .main-heading {
+    width: 80% !important;
+  }
+
+  .arc-gis-tutorial-container {
+    width: 100% !important;
+  }
+
+  .arc-gis-tutorial-container iframe {
+    height: 347px !important;
+  }
+}
+@media only screen and (max-width: 720px) {
+  html,
+  body {
+    font-size: calc(12px + 0.390625vw) !important;
+  }
+  .valued-clients .image-row {
+    width: 100% !important;
+  }
+  .valued-clients .image-row .image-container {
+    width: 30% !important;
+    margin: 10px;
+  }
+  .valued-client .image-row {
+    width: 100% !important;
+  }
+  .valued-client .image-row .image-container {
+    width: 30% !important;
+    margin: 10px;
+  }  
+  .ygn-map-gallery-container .ygn-map-gallery .custom-row {
+    justify-content: center !important;
+  }
+  .map-description .map-description-left,
+  .map-description .map-description-right {
+    width: 100% !important;
+  }
+  .map-gallery-container .map-gallery .img-card {
+    width: 45% !important;
+  }
+
+  .main-content .custom-row.not-found .custom-row-left,
+  .main-content .custom-row.not-found .custom-row-right {
+    width: 100% !important;
+    margin: 20px 0px;
+    justify-content: center !important;
+  }
+  .google-search-box {
+    width: 80% !important;
+  }
+  .main-content .custom-row.suggestion .custom-heading .main-heading {
+    text-align: center !important;
+  }
+  .main-content .custom-row.suggestion .url-suggestion-slider .custom-card {
+    width: 45% !important;
+    margin: 10px 0px !important;
+  }
+}
+
+@media only screen and (max-width: 549px) {
+  .banner-img-container {
+    height: calc(0.5 * 100vw) !important;
+  }
+  .banner-img-container img {
+    transform: translateY(0%) !important;
+  }
+
+  .main-content
+    .our-services-container
+    .our-services
+    .our-services-row
+    .custom-card {
+    width: 400px !important;
+    min-width: 200px !important;
+    min-height: 300px !important;
+    margin: 10px 0px !important;
+  }
+
+  .download-section .map-download {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+
+  .download-section .map-download .download .btn-container {
+    justify-content: center !important;
+  }
+  .download-section .map-download .download .btn-container a {
+    margin: 10px 10px !important;
+  }
+  .download-section .map-download .available-now .description {
+    width: 80%;
+    margin: 0px auto;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-content {
+    justify-content: center !important;
+  }
+  .banner-content .heading {
+    display: none !important;
+  }
+
+  .banner-content .sub-heading {
+    font-size: calc(10px + 0.39vw) !important;
+    margin: 20px;
+  }
+  .custom-heading.PNP .main-heading {
+    width: 100% !important;
+  }
+  .button-container:has(form button.export-btn) {
+    justify-content: center;
+  }
+  .valued-clients .custom-heading .main-heading::after {
+    width: 80% !important;
+  }
+  .valued-clients .image-row .image-container {
+    width: 50% !important;
+    margin: 10px 0px;
+  }
+  .valued-client .custom-heading .main-heading::after {
+    width: 80% !important;
+  }
+  .valued-client .image-row .image-container {
+    width: 80% !important;
+    margin: 5px 5px 5px 5px;
+  }  
+  .map-gallery-container .map-gallery .img-card {
+    width: 100% !important;
+  }
+  .main-content .custom-row.suggestion .url-suggestion-slider .custom-card {
+    width: 100% !important;
+    margin: 20px 0px !important;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .custom-heading.gis .main-heading {
+    width: 90% !important;
+  }
+  .gis-card-view {
+    padding: 20px !important;
+    width: 90% !important;
+  }
+  .valued-clients .custom-heading .main-heading::after {
+    width: 90% !important;
+  }
+  .valued-client .custom-heading .main-heading::after {
+    width: 90% !important;
+  }  
+  .main-content
+    .custom-row.custom-row.not-found
+    .custom-row-right
+    .description {
+    width: 90% !important;
+  }
+}
+}

@@ -1,0 +1,547 @@
+.custom-heading,
+.custom-heading.gis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 0px;
+}
+
+.custom-heading .main-heading {
+  width: 80%;
+
+  font-size: calc(30px + 0.39vw);
+  text-align: left;
+}
+
+.custom-heading .main-heading::after {
+  content: "";
+
+  padding: 0.6px;
+  margin-top: 10px;
+  border-radius: 100%;
+  position: relative;
+  background: var(--main-accent-color);
+  opacity: 0.5;
+}
+
+.gis-card-view {
+  width: 80%;
+
+  margin: 0px auto;
+  margin-bottom: 20px;
+  padding: 40px;
+
+  background: linear-gradient(145deg, #eeee, var(--main-bg-color));
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.gis-card-view .block {
+  margin-bottom: 40px;
+}
+.gis-card-view .block .custom-hr {
+  padding: 1px;
+  width: 100%;
+  background: var(--main-accent-color);
+}
+.gis-card-view .block .custom-heading {
+  padding: 0px;
+  padding-bottom: 15px;
+}
+.gis-card-view .block .custom-heading .main-heading {
+  width: 100%;
+  font-size: calc(15px + 0.39vw);
+}
+
+.gis-card-view .block .custom-heading .main-heading::after {
+  display: none;
+}
+
+.gis-card-view .description {
+  line-height: 30px;
+  text-align: justify;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.gis-card-view .description p {
+  margin: 0px;
+}
+
+.gis-card-view .description .description-left {
+  width: 45%;
+}
+
+.gis-card-view .description .description-right {
+  width: 50%;
+}
+.gis-card-view .description .description-right .image-container {
+  width: 100%;
+}
+.gis-card-view .description .description-right .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gis-card-view .text-dropdown {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  margin: 20px 0px;
+}
+.gis-card-view .text-dropdown details summary {
+  color: var(--main-accent-color);
+  user-select: none;
+  cursor: pointer;
+}
+.gis-card-view .text-dropdown ul,
+.gis-card-view .description ul {
+  list-style-type: none;
+  margin: 0;
+}
+.gis-card-view .text-dropdown ul li,
+.gis-card-view .description ul li {
+  margin: 5px 0px;
+}
+
+.gis-card-view .text-dropdown ul li .icon-container,
+.gis-card-view .description ul li .icon-container {
+  margin-right: 10px;
+  color: var(--main-accent-color);
+}
+
+.gis-card-view .text-dropdown .text-dropdown-left,
+.text-dropdown-right {
+  width: 50%;
+}
+.gis-card-view .btn-container {
+  margin: 20px 0px;
+}
+.gis-card-view .btn-container a {
+  width: 120px;
+  height: 40px;
+  background: var(--main-accent-color);
+
+  padding: 0px 5px;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: var(--font-color-primary);
+
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.swiper-container {
+  position: relative;
+  user-select: none;
+}
+
+.swiper-container .swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-container .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+
+  color: var(--font-color-primary);
+  font-size: calc(14px + 0.39vw);
+
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.swiper-container .icon-container.close {
+  top: 40px;
+  left: 90%;
+  display: none;
+  color: red;
+}
+
+.swiper-container .swiper .icon-container.open {
+  top: 50%;
+  left: 50%;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev,
+.swiper .swiper-pagination {
+  color: var(--main-accent-color);
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+  overflow-y: scroll;
+}
+.swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.swiper-full-screen {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0%;
+  left: 0%;
+
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: fade-in 1s;
+}
+
+.swiper-full-screen .swiper {
+  width: 80%;
+  height: fit-content;
+}
+
+.swiper-full-screen .swiper .icon-container.open {
+  display: none;
+}
+
+.swiper-container.swiper-full-screen .icon-container.close {
+  display: flex;
+}
+
+.gis-card-view .block .house-number .image-container,
+.retail-outlet-image .image-container,
+.high-condo .image-container {
+  width: 100%;
+  height: fit-content;
+}
+
+.gis-card-view .block .house-number .image-container img,
+.retail-outlet-image .image-container img,
+.high-condo .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gis-card-view .block .retail-outlet-video {
+  width: 100%;
+}
+
+.gis-card-view .block .retail-outlet-video iframe {
+  width: 100%;
+  height: 480px;
+}
+
+.gis-card-view .block .three60-photos {
+  width: 100%;
+}
+.gis-card-view .block .three60-photos .custom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gis-card-view .block .three60-photos .custom-row .three60-image-container {
+  width: 49%;
+  margin: 10px 0px;
+}
+
+.gis-card-view
+  .block
+  .three60-photos
+  .custom-row
+  .three60-image-container
+  iframe {
+  width: 100%;
+  height: 480px;
+}
+
+.gis-card-view .block .fiber-optic-cable {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.gis-card-view .block .fiber-optic-cable .fiber-optic-cable-left,
+.fiber-optic-cable-right {
+  width: 49%;
+}
+.gis-card-view
+  .block
+  .fiber-optic-cable
+  .fiber-optic-cable-left
+  ul:first-of-type {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.gis-card-view
+  .block
+  .fiber-optic-cable
+  .fiber-optic-cable-right
+  .image-container {
+  width: 100%;
+  height: fit-content;
+}
+.gis-card-view
+  .block
+  .fiber-optic-cable
+  .fiber-optic-cable-right
+  .image-container
+  img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gis-card-view .block .for-home-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.gis-card-view .block .for-home-number .for-home-number-left,
+.gis-card-view .block .for-home-number .for-home-number-right {
+  width: 49%;
+}
+
+.gis-card-view .block .for-home-number .for-home-number-left .image-container {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.gis-card-view .block .for-home-number .for-home-number-right .image-container {
+  width: 100%;
+}
+
+.gis-card-view .block .for-home-number .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gis-card-view .block .aerial-photo {
+  width: 90%;
+
+  padding: 20px;
+  margin: 0px auto;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gis-card-view .block .aerial-photo .custom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gis-card-view .block .aerial-photo .custom-row .image-container {
+  width: 22%;
+}
+
+.gis-card-view .block .aerial-photo .custom-row .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gis-card-view .block .archipelago .custom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gis-card-view .block .archipelago .custom-row .custom-card {
+  width: 48%;
+
+  padding: 20px;
+  margin: 10px 0px;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.gis-card-view
+  .block
+  .archipelago
+  .custom-row
+  .custom-card
+  .custom-heading
+  .main-heading {
+  font-size: calc(10px + 0.39vw);
+}
+
+.gis-card-view .block .archipelago .custom-row .custom-card .image-container {
+  width: 100%;
+  max-height: 350px;
+  overflow-y: scroll;
+}
+
+.gis-card-view
+  .block
+  .archipelago
+  .custom-row
+  .custom-card
+  .image-container
+  img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gis-card-view .block .tabs-container .tab {
+  overflow: hidden;
+  border: 2px solid var(--main-accent-color);
+  border-bottom: none;
+  background-color: #f1f1f1;
+}
+
+.gis-card-view .block .tabs-container .tab button {
+  border: none;
+  padding: 14px 16px;
+
+  transition: 0.3s;
+  font-size: calc(10px + 0.39vw);
+  font-family: Helvetica-bold;
+  font-weight: 100;
+
+  cursor: pointer;
+}
+.gis-card-view .block .tabs-container .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 2px solid var(--main-accent-color);
+  border-top: none;
+}
+
+.gis-card-view .block .tabs-container .tabcontent ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.gis-card-view .block .tabs-container .tabcontent ul li .icon-container {
+  margin-right: 10px;
+  color: var(--main-accent-color);
+}
+
+.gis-card-view .block .tabs-container .tab button.active {
+  background-color: var(--main-accent-color);
+  color: var(--font-color-primary);
+}
+
+.gis-card-view .block .customized-map {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.gis-card-view .block .customized-map .customized-map-left,
+.customized-map-right {
+  width: 49%;
+}
+.gis-card-view .block .customized-map .customized-map-left .image-container {
+  width: 100%;
+}
+.gis-card-view
+  .block
+  .customized-map
+  .customized-map-right
+  .image-container
+  img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gis-card-view .block .table-container {
+  width: 100%;
+
+  margin: 0px auto;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 8px;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  position: relative;
+}
+
+.gis-card-view .block .table-container table thead,
+.gis-card-view .block .table-container table tfoot {
+  font-family: Helvetica-bold;
+  color: var(--main-accent-color);
+  text-transform: capitalize;
+  font-weight: 100;
+
+  background: var(--main-bg-color);
+}
+
+.gis-card-view .block .table-container table td {
+  padding: 10px;
+}
+
+.gis-card-view .block .table-container table tbody {
+  background: var(--main-bg-color);
+  color: var(--font-color);
+}
+
+/* hover */
+.swiper-container .icon-container:hover {
+  background: var(--main-bg-color);
+  color: var(--main-accent-color);
+}
+
+.gis-card-view .block .tabs-container .tab button:hover {
+  background-color: var(--main-accent-color);
+  color: var(--font-color-primary);
+}
+.gis-card-view .btn-container a:hover {
+  box-shadow: unset;
+}
+
+/* active */
+.swiper-container .icon-container:active {
+  background: rgba(0, 0, 0, 0.5);
+  transition: unset;
+}
+.gis-card-view .btn-container a:active {
+  background: rgba(5, 76, 164, 0.5);
+  transition: unset;
+}
+
+/* animation */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

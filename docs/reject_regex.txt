@@ -1,0 +1,1 @@
+(add-to-cart=|/cart/|/checkout/|/my-account/|/wp-login\.php|/wp-admin/|/wp-json/|/feed/|\?replytocom=|\?orderby=|\?filter_|\?min_price=|\?max_price=)

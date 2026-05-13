@@ -1,0 +1,10 @@
+.map-gallery-container .map-gallery .custom-row {
+  justify-content: space-around;
+}
+
+.map-gallery-container .map-gallery .img-card {
+  width: 21%;
+}
+.ygn-district img:hover {
+  transform: scale(1.2);
+}

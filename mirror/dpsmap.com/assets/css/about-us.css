@@ -1,0 +1,150 @@
+.image-container {
+  width: 100%;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.company-profile {
+  width: 80%;
+  margin: 80px auto;
+}
+
+.company-profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.company-profile .company-profile-left,
+.company-profile .company-profile-right {
+  width: 48%;
+}
+
+.company-profile .custom-heading {
+  margin-bottom: 25px;
+}
+
+.company-profile .custom-heading .main-heading {
+  font-family: BankGothic-light;
+  margin-bottom: 15px;
+  font-size: calc(14px + 0.39vw);
+}
+
+.company-profile .custom-heading .sub-heading {
+  font-size: calc(24px + 0.39vw);
+  color: var(--main-accent-color);
+  font-family: BankGothic-bold;
+  letter-spacing: 2px;
+}
+
+.company-profile .description {
+  line-height: 35px;
+}
+
+.valued-clients {
+  width: 80%;
+  margin: 0px auto;
+  margin-bottom: 80px;
+}
+.valued-clients .custom-heading {
+  width: 100%;
+}
+
+.valued-clients .custom-heading .main-heading {
+  margin: 0px auto;
+
+  text-align: center;
+  font-size: calc(24px + 0.39vw);
+}
+
+.valued-clients .custom-heading .main-heading::after {
+  content: "";
+  width: 380px;
+
+  padding: 1px;
+  margin: 8px auto;
+
+  border-radius: 100%;
+  position: relative;
+
+  background: var(--main-accent-color);
+  opacity: 0.2;
+}
+.valued-clients .image-row {
+  width: 100%;
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.valued-clients .image-row .image-container {
+  width: 10%;
+}
+
+.valued-clients .image-row .image-container img {
+  transition: all 0.3s linear;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* hover */
+
+.valued-clients .image-row .image-container img:hover {
+  transform: scale(1.2);
+}
+
+/* products*/
+
+.valued-client {
+  width: 100%;
+  margin: 0px auto;
+  margin-bottom: 80px;
+}
+.valued-client .custom-heading {
+  width: 100%;
+}
+
+.valued-client .custom-heading .main-heading {
+  margin: 0px auto;
+  text-align: center;
+  font-size: calc(24px + 0.39vw);
+}
+
+.valued-client .custom-heading .main-heading::after {
+  content: "";
+  width: 380px;
+  padding: 1px;
+  margin: 8px auto;
+  border-radius: 100%;
+  position: relative;
+  background: var(--main-accent-color);
+  opacity: 0.2;
+}
+.valued-client .image-row {
+  width: 100%;
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.valued-client .image-row .image-container {
+  width: 40%;
+}
+
+.valued-client .image-row .image-container img {
+  transition: all 0.3s linear;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* hover */
+
+.valued-client .image-row .image-container img:hover {
+  transform: scale(1.2);
+}
+

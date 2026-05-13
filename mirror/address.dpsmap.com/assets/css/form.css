@@ -1,0 +1,250 @@
+.errors {
+  display: inline;
+  font-size: calc(8px + 0.39vw);
+}
+
+.verify-your-acc {
+  width: 320px;
+  padding: 20px;
+
+  background: var(--main-bg-color);
+
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 1;
+
+  border-radius: 8px;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  user-select: none;
+
+  animation: slide-in 1s linear;
+}
+
+.verify-your-acc form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  text-decoration: none;
+  color: var(--font-color-primary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--main-accent-color);
+
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.contact-us {
+  width: 70%;
+
+  text-align: center;
+  line-height: 25px;
+}
+
+#body {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.custom-download-heading {
+  width: 60%;
+  margin: 20px auto;
+}
+.custom-download-heading .main-heading {
+  color: var(--main-accent-color);
+  font-family: BankGothic-bold;
+  text-transform: uppercase;
+  padding: 20px 0px;
+
+  font-size: calc(20px + 0.39vw);
+}
+
+.custom-download-heading .main-heading::after {
+  content: "";
+
+  padding: 0.6px;
+  margin-top: 10px;
+  border-radius: 100%;
+  position: relative;
+  background: var(--main-accent-color);
+  opacity: 0.1;
+}
+
+.download-form-container {
+  width: 60%;
+  height: auto;
+
+  margin: 0px auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.download-form-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.download-form-container form .custom-row {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.download-form-container form .custom-row .custom-input {
+  width: 45%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+
+  margin: 10px 0px;
+  padding: 10px;
+
+  border-radius: 8px;
+}
+
+.download-form-container form .custom-row .custom-select {
+  width: 45%;
+  margin: 15px 0px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.download-form-container form .custom-row .custom-input .icon-container {
+  width: 15%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.download-form-container form .custom-row .custom-input .icon-container .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  background: var(--main-accent-color);
+  padding: 5px;
+
+  color: var(--font-color-primary);
+
+  border-radius: 50%;
+}
+
+.download-form-container form .custom-input input,
+.download-form-container form .custom-input .custom-btn {
+  width: 85%;
+  padding: 10px;
+
+}
+
+.download-form-container form .custom-input textarea {
+  width: 85%;
+  min-height: 34px;
+
+  padding: 0px 10px;
+
+  resize: vertical;
+
+  font-family: Helvetica-regular;
+}
+
+.download-form-container form .custom-input textarea::placeholder {
+  transform: translateY(50%);
+}
+
+.download-form-container form .custom-row .custom-input:has(input.custom-btn) {
+  transition: all 0.1s;
+}
+
+.download-form-container form .custom-row .custom-input .custom-btn {
+  width: 100%;
+  background: transparent;
+
+  cursor: pointer;
+
+  text-align: center;
+  line-height: 20px;
+  color: var(--font-color);
+}
+
+.tutorial {
+  width: 60%;
+  font-family: Pyidaungsu-regular, Zawgyi-One;
+  padding: 20px 0px;
+}
+
+.tutorial .custom-heading .main-heading {
+  font-size: calc(20px + 0.39vw);
+}
+
+.tutorial .custom-heading .main-heading::after {
+  content: "";
+  width: 100%;
+
+  margin-top: 10px;
+  padding: 0.6px;
+
+  background: var(--main-accent-color);
+
+  opacity: 0.2;
+}
+
+/* hover */
+.verify-your-acc form button:hover {
+  box-shadow: 0px 8px 15px var(--main-accent-color);
+}
+
+/* active */
+.verify-your-acc form button:active {
+  transition: unset;
+  box-shadow: unset;
+}
+
+.download-form-container
+  form
+  .custom-row
+  .custom-input:has(input.custom-btn):active,
+.download-form-container
+  form
+  .custom-row
+  .custom-input:has(div.custom-btn):active {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
+}
+
+/* animations */
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

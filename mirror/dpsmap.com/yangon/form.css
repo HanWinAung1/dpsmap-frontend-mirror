@@ -1,0 +1,381 @@
+#contact { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+#contact1 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+#contact2 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+#contact3 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+#contact4 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+#contact5 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+}
+#contact6 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+#contact7 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+#contact8 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+#contact9 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+#contact10 { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+#contactForm { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+  background: #fff;
+  z-index:999;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+#contactForm input, textarea { 
+width:500px;
+} 
+
+#contactForm1 input, textarea { 
+width:500px;
+} 
+
+#contactForm2 input, textarea { 
+width:500px;
+} 
+#contactForm3 input, textarea { 
+width:500px;
+}
+
+#contactForm4 input, textarea { 
+width:500px;
+}
+#contactForm5 input, textarea { 
+width:500px;
+}
+#contactForm6 input, textarea { 
+width:500px;
+}
+#contactForm7 input, textarea { 
+width:500px;
+}
+#contactForm8 input, textarea { 
+width:500px;
+}
+#contactForm9 input, textarea { 
+width:500px;
+}
+#contactForm10 input, textarea { 
+width:500px;
+}
+
+#contactForm1 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+  background: #fff;
+  z-index:999;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+#contactForm2 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+  background: #fff;
+  z-index:999;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+#contactForm3 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+  z-index:999;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+#contactForm4 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  z-index:999;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+#contactForm5 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  z-index:999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+#contactForm6 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+  z-index:999;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+#contactForm7 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  z-index:999;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+#contactForm8 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+  z-index:999;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+#contactForm9 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+  background: #fff;
+  z-index:999;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+#contactForm10 { 
+  display: none;
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 600px;
+  text-align: center;
+  z-index:999;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+
+input, textarea { 
+  margin: .8em auto;
+  font-family: inherit; 
+  text-transform: inherit; 
+  font-size: inherit;
+  display: block; 
+  width: 280px; 
+  padding: .4em;
+}
+textarea { height: 80px; resize: none; }
+
+.formBtn { 
+  width: 140px;
+  display: inline-block;
+  background: teal;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.2em;
+  border: none;
+}
+@media(max-width: 768px){
+	#contactForm { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm input, textarea { 
+	width:100%;
+	} 
+	#contactForm1 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm1 input, textarea { 
+	width:100%;
+	} 
+	#contactForm2 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm2 input, textarea { 
+	width:100%;
+	} 
+	#contactForm3 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm3 input, textarea { 
+	width:100%;
+	} 
+	#contactForm4 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm4 input, textarea { 
+	width:100%;
+	} 
+	#contactForm5 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm5 input, textarea { 
+	width:100%;
+	} 
+	#contactForm6 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm6 input, textarea { 
+	width:100%;
+	} 
+	#contactForm7 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm7 input, textarea { 
+	width:100%;
+	} 
+	#contactForm8 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm8 input, textarea { 
+	width:100%;
+	} 
+	#contactForm9 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm9 input, textarea { 
+	width:100%;
+	} 
+	#contactForm10 { 
+	width: 100%;
+	position: absolute;
+	top:none;
+	}
+	#contactForm10 input, textarea { 
+	width:100%;
+	} 
+}

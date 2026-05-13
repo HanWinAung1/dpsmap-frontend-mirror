@@ -1,0 +1,130 @@
+.errors {
+  display: inline;
+}
+#body {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.custom-download-heading {
+  width: 60%;
+  margin: 20px auto;
+}
+.custom-download-heading .main-heading {
+  color: var(--main-accent-color);
+  font-family: BankGothic-bold;
+  text-transform: uppercase;
+  padding: 20px 0px;
+
+  font-size: calc(20px + 0.39vw);
+}
+
+.custom-download-heading .main-heading::after {
+  content: "";
+
+  padding: 0.6px;
+  margin-top: 10px;
+  border-radius: 100%;
+  position: relative;
+  background: var(--main-accent-color);
+  opacity: 0.1;
+}
+
+.download-form-container {
+  width: 60%;
+  height: auto;
+
+  margin: 0px auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.download-form-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.download-form-container form .custom-row {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.download-form-container form .custom-row .custom-input {
+  width: 45%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+
+  margin: 15px 0px;
+  padding: 10px;
+
+  border-radius: 8px;
+}
+
+.download-form-container form .custom-row .custom-select {
+  width: 45%;
+  margin: 15px 0px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+  border-style: double;
+}
+
+.download-form-container form .custom-row .custom-input .icon-container {
+  width: 15%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.download-form-container form .custom-row .custom-input .icon-container .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  background: var(--main-accent-color);
+  padding: 5px;
+
+  color: var(--font-color-primary);
+
+  border-radius: 50%;
+}
+
+.download-form-container form .custom-input input {
+  width: 85%;
+  padding: 10px;
+
+}
+
+.download-form-container form .custom-row .custom-input:has(input.custom-btn) {
+  transition: all 0.1s;
+}
+
+.download-form-container form .custom-row .custom-input .custom-btn {
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.download-form-container
+  form
+  .custom-row
+  .custom-input:has(input.custom-btn):active {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
+}

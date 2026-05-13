@@ -1,0 +1,32 @@
+.ygn-district{
+   margin-top: 40px; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
+}
+.sub-heading-ygn-district{
+  
+}
+.district-heading{
+    margin: 0px 20px;
+    text-align: center;
+    color: var(--font-color-primary);
+    font-size: calc(25px + 0.39vw);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: #054CA4;
+    font-family: BankGothic-bold;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+img.ygn-district-map{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}

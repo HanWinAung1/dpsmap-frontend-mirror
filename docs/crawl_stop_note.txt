@@ -1,0 +1,2 @@
+Stopped controlled crawl after file count plateaued and remaining queue showed repeated unreachable/404 assets.
+2026-05-13T02:40:30-04:00

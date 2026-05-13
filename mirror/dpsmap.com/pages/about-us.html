@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <META NAME="keywords" content="1sqft, DPS 1sqft">
+    <META NAME="description" content="1sqft, DPS MAP 1SQFT">
+    <meta name="google-site-verification" content="fLa8xgJoz3j8ameNlxUbDmu13GE2d0MSwVV3aD-rnwo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#222">
+    <link rel="shortcut icon" href="/assets/favicon/favicon-512x512.png" sizes="512x512" type="image/x-icon" />
+    <link rel="manifest" href="/manifest.json">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/about-us.css" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="/assets/libs/fontawesome/css/all.min.css" />
+
+    <title>About Us - DPS Map</title>
+    <style>
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .responsive {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            filter: drop-shadow(10px 10px 7px #13566f);
+            border-radius: 8px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #pdf-canvas {
+            border: 1px solid black;
+            width: 100%;
+            /* Make the canvas take up 100% of its container's width */
+            height: auto;
+            /* Add border to canvas */
+        }
+
+        .page-controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            background-color: #f9f9f9;
+            color: #000;
+            font-weight: bold;
+            flex: 1;
+            text-align: center;
+        }
+
+        .tab.active {
+            background-color: #001aff;
+            color: #fff;
+        }
+
+        /* Styling for content sections */
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .page-content {
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            min-height: 500px;
+            background: #f9f9f9;
+            white-space: pre-wrap;
+        }
+
+        .page-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .tab {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- header area -->
+    <section id="header">
+        <!---->
+ <!-- fuse js  -->
+     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+
+
+<style>
+    /* General styling for navbar */
+    .navbar-container ul.navbar li a {
+        height: 45px;
+        display: flex;
+        border: 1px 1px 1px solid black;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-family: Helvetica-bold;
+        color: var(--font-color);
+        padding: 0px 10px;
+        position: relative;
+    }
+
+    .navbar {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    .navbar li {
+        position: relative;
+        margin-right: 20px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #333;
+        padding: 8px 12px;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background: #f4f4f4;
+        border-radius: 4px;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+        position: relative;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        min-width: 150px;
+        flex-direction: column;
+        /* Make dropdown vertical */
+    }
+
+    .dropdown-menu a {
+        display: block;
+        /* padding: 8px 12px; */
+        color: yellow;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        background: rgb(21, 66, 211);
+    }
+
+    /* Show dropdown menu on hover */
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+
+    /* Arrow indicator for dropdown */
+    /*.dropdown-toggle::after {*/
+    /*    content: '\25BC';*/
+    /*    margin-left: 5px;*/
+    /*    font-size: 10px;*/
+    /*}*/
+
+    @keyframes blinker {
+        50% {
+            /*opacity: 0;*/
+        }
+    }
+
+    /*  */
+    .goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none;
+    }
+
+    body>.skiptranslate,
+    .goog-logo-link,
+    .gskiptranslate,
+    .goog-te-gadget span,
+    .goog-te-banner-frame,
+    #goog-gt-tt,
+    .goog-te-balloon-frame,
+    div#goog-gt- {
+        display: none !important;
+    }
+
+    .goog-te-gadget {
+        color: transparent !important;
+        font-size: 0px;
+    }
+
+    .goog-text-highlight {
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    #google_translate_element select {
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: none;
+        font-weight: bold;
+        border-radius: 3px;
+        padding: 8px 12px
+    }
+
+    #language_list li:hover {
+        background: rgb(220, 220, 221);
+    }
+
+    .header {
+        /* position: fixed; */
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+
+    .header h2 {
+        text-align: center;
+    }
+
+    .progress-container {
+        width: 100%;
+        height: 8px;
+        background: #ccc;
+    }
+
+    .progress-bar {
+        height: 8px;
+        background: rgb(8, 61, 205);
+        width: 0%;
+    }
+
+    .content {
+        padding: 100px 0;
+        margin: 50px auto 0 auto;
+        width: 80%;
+    }
+
+    .bg-dark {
+        background: rgb(0, 0, 0);
+        /* Example dark background color */
+        color: white !important;
+                text-shadow: 1px 1px 0.4px black !important;
+
+        /* Example light text color */
+    }
+</style>
+<!---->
+<div class="navbar-container">
+
+    <!-- Translation Code here -->
+
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Translation Code End here -->
+    <!--7.3.2025-->
+ <!--   <div>-->
+        <!--<marquee class="blink" scrollamount="4"> <span style="color:red;margin:-10px auto;">Breaking News:</span>(Unicode): Free map တွေ download ပေးနေတဲ့အစီအစဉ်က၂၀၂၄ အောက်တိုဘာလကုန်မှာပြီးတော့မှာဖြစ်လို့ အမြန်ဆုံးကိုယ်လိုအပ်တဲ့မြေပုံတွေdownloadရယူထားကြပါရန်... |  (English): The free map download program will end at the end of October 2024, so download the maps you need as soon as possible. </marquee>-->
+
+ <!--<marquee class="blink" scrollamount="4" style="text-shadow:0.3px 0.4px 0.5px black">-->
+            <!-- <span style="color:red;margin:-10px auto;">Breaking News:</span> -->
+ <!--          <a href="https://yangontownshipmapbook.dpsmap.com/"> yangon township map book (2025 update) </a>ကို 25000mmk ဖြင့် ဝယ်ယူနိင်ပါပြီ ,<span class="ms-5"></span> Free Maps များ Download ဆွဲရန် ဒီလင့်ကို <a href="https://dpsmap.com/pages/map-download/">Free Download Link</a> နှိပ်ပါ ... -->
+            <!-- | (English): The free map download program will end at the end of October 2024, so download the maps you need as soon as possible.  -->
+ <!--       </marquee>-->
+
+ <!--   </div>-->
+    <!---->
+    <div class="header-contact">
+        <div class="header-contact-far-left"></div>
+        <div class="header-contact-left">
+            <div class="contact">
+                <span class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </span>
+                <a href="tel:+959775204020">+959 775204020</a>
+            </div>
+
+            <div class="contact">
+                <span class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+                <a href="/cdn-cgi/l/email-protection#ef8b9f9c828e9faf88828e8683c18c8082"><span class="__cf_email__" data-cfemail="b5d1c5c6d8d4c5f5d2d8d4dcd99bd6dad8">[email&#160;protected]</span></a>
+            </div>
+        </div>
+        <div class="header-contact-center">
+            <!-- spacer -->
+        </div>
+        <div class="header-contact-right">
+            <div class="contact">
+                <span class="contact-icon" style="background:#0000ff">
+                    <a href="https://www.facebook.com/DPSMyanmar" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </span>
+            </div>
+
+            <div class="contact">
+                <span class="contact-icon" style="background:#0a66c2;">
+                    <a href="https://www.linkedin.com/company/dpsmyanmar/" target="_blank">
+                        <i class="fa-brands fa-linkedin-in text-white"></i>
+                    </a>
+                </span>
+            </div>
+
+            <div class="contact">
+                <span class="contact-icon" style="background:red;">
+                    <a href="https://www.youtube.com/@dpsco.ltd.3105" target="_blank">
+                        <i class="fa-brands fa-youtube text-white"></i>
+                    </a>
+                </span>
+            </div>
+
+            <!-- 
+             -->
+            <div class="contact ms-3" style="z-index: 1111111;">
+                <!-- Custom Language Selector -->
+                <div id="custom_language_selector" style="position: relative; display: inline-block;">
+                    <button id="current_language" class="" style="width:130px;border: none; background: #f8f9fa; border-radius: 1px; cursor: pointer; display: flex; align-items: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <img src="https://flagcdn.com/w40/us.png" class="img-fluid shadow" alt="English" style="width: 30px; vertical-align: middle; margin-right: 10px;">
+                        <!-- <img src="https://flagcdn.com/w40/mm.png" class="img-fluid shadow ms-2" alt="English" style="width: 30px; vertical-align: middle; margin-right: 10px;"> -->
+
+                        <span style="font-weight: bold; color: #333;">English</span>
+                    </button>
+                    <ul id="language_list" style="display: none; position: absolute; background: #ffffff; list-style: none; margin: 0; padding: 0; border-radius: 0px; box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); width: 160px; top: 35px; left: 0; z-index: 999;">
+                        <li data-lang="en" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">
+                            <img src="https://flagcdn.com/w40/us.png" class="img-fluid shadow" alt="English" style="width: 30px; margin-right: 10px;"> English
+                        </li>
+                        <li data-lang="my" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">
+                            <img src="https://flagcdn.com/w40/mm.png" class="img-fluid shadow" alt="Myanmar" style="width: 30px; margin-right: 10px;"> Myanmar
+                        <!--</li>-->
+                        <!--      <li data-lang="zh-CN" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">-->
+                        <!--    <img src="https://flagcdn.com/w40/cn.png" alt="Chinese" style="width: 30px; margin-right: 10px;"> Chinese-->
+                        <!--</li>-->
+                        <!-- <li data-lang="ru" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">
+                            <img src="https://flagcdn.com/w40/ru.png" alt="Russian" style="width: 30px; margin-right: 10px;"> Russian
+                        </li>
+                  
+                        <li data-lang="hi" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">
+                            <img src="https://flagcdn.com/w40/in.png" alt="Hindi" style="width: 30px; margin-right: 10px;"> Hindi
+                        </li>
+                        <li data-lang="ja" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">
+                            <img src="https://flagcdn.com/w40/jp.png" alt="Japanese" style="width: 30px; margin-right: 10px;"> Japanese
+                        </li>
+                        <li data-lang="ko" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">
+                            <img src="https://flagcdn.com/w40/kr.png" alt="Korean" style="width: 30px; margin-right: 10px;"> South Korea
+                        </li>
+                        <li data-lang="ko-KP" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">
+                            <img src="https://flagcdn.com/w40/kp.png" alt="North Korean" style="width: 30px; margin-right: 10px;"> North Korea
+                        </li>
+                        <li data-lang="zh-HK" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">
+                            <img src="https://flagcdn.com/w40/hk.png" alt="Hong Kong" style="width: 30px; margin-right: 10px;"> Hong Kong
+                        </li>
+                        <li data-lang="id" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #f1f1f1;">
+                            <img src="https://flagcdn.com/w40/id.png" alt="Indonesian" style="width: 30px; margin-right: 10px;"> Indonesia
+                        </li>
+                        <li data-lang="ms-MY" style="cursor: pointer; padding: 10px 15px; display: flex; align-items: center;">
+                            <img src="https://flagcdn.com/w40/my.png" alt="Malaysia" style="width: 30px; margin-right: 10px;"> Malaysia
+                        </li> -->
+                    </ul>
+                </div>
+
+
+
+                <!-- Google Translate -->
+                <div id="google_translate_element" style="display: none;margin-top:-20px"></div>
+
+                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                    // Load Google Translate API
+                    (function() {
+                        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                        document.body.appendChild(script);
+                    })();
+
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en', // Default language
+                            autoDisplay: false // Prevent auto-detection
+                        }, 'google_translate_element');
+                    }
+
+                    // Language Selector Logic
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const currentLanguage = document.getElementById('current_language');
+                        const languageList = document.getElementById('language_list');
+
+                        // Show/Hide language dropdown
+                        currentLanguage.addEventListener('click', function() {
+                            languageList.style.display = languageList.style.display === 'none' ? 'block' : 'none';
+                        });
+
+                        // Change language
+                        document.querySelectorAll('#language_list li').forEach(function(item) {
+                            item.addEventListener('click', function() {
+                                const lang = item.getAttribute('data-lang');
+                                const translateSelect = document.querySelector('#google_translate_element select');
+                                if (translateSelect) {
+                                    translateSelect.value = lang;
+                                    translateSelect.dispatchEvent(new Event('change'));
+                                }
+
+                                // Update current language button
+                                currentLanguage.innerHTML = item.innerHTML;
+
+                                // Hide dropdown
+                                languageList.style.display = 'none';
+                            });
+                        });
+                    });
+                </script>
+            </div>
+            <!--  -->
+            <!--  -->
+            <!--<div class="ms-3">-->
+
+            <!--    <button class="bg-dark" onclick="toggleDarkMode()"><i class="fa fa-moon py-1"></i></button>-->
+            <!--</div>-->
+
+            <!--  -->
+        </div>
+        <div class="header-contact-far-right">
+                    </div>
+    </div>
+
+    <div class="nav">
+        <div class="logo-container">
+            <a class="logo" href="https://dpsmap.com/"><img src="https://dpsmap.com/assets/favicon/favicon-512x512.png" loading="lazy" alt="dpsmap" />
+            </a>
+            <div class="heading">
+                <span class="main-heading"><a href="/" class="text-primary">DPSMAP.COM </a></span>
+                <span class="sub-heading"><a href="/">Design Printing Services</a></span>
+            </div>
+        </div>
+        <ul class="navbar">
+            <li><a href="https://dpsmap.com/">Home</a></li>
+            <li><a translate="no" href="https://dpsmap.com/pages/about-us/">About Us</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Product & Services</a>
+                <div class="dropdown-menu">
+                    <a href="https://dpsmap.com/yangon/">Yangon Map</a>
+                    <a href="https://dpsmap.com/myanmar/">Myanmar Map</a>
+                    <a href="https://dpsmap.com/mandalay/">Mandalay Map</a>
+                    <a href="https://dpsmap.com/naypyitaw/">Naypyitaw Map</a>
+                                        <a class="dropdown-item text-dark" href="https://dpsmap.com/pyinmana/pyinmana.shtml">Pyinmana Map</a>
+
+                    <a href="https://dpsmap.com/bago/">Bago Map</a>
+                    <a target="_blank" href="https://dpsmap.com/districts/">District</a>
+                       <a href="https://dpsmap.com/pages/map-download/">Free Download Maps</a>
+                    <a href="https://dpsmap.com/1sqft/">1 SQFT</a>
+                    <a href="https://dpsmap.com/mapplotting.php">Map Plotting</a>
+                    <a href="https://myanmar.dpsmap.com/" target="_blank">Printing Service</a>
+                    <a href="https://dpsmap.com/gis/">GIS Map</a>
+                    <a href="https://dpsmap.com/tracking/">Tracking</a>
+                    <a href="https://dpsmap.com/website-services/">Website Service By DPS</a>
+                  
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Locations</a>
+                <div class="dropdown-menu">
+                    <a target="_blank" href="https://address.dpsmap.com/login.php">Address DPS Map</a>
+                    <a target="_blank" href="https://dpsmap.com/industrial/">Industrial</a>
+                      <a target="_blank" href="https://dpsmap.com/districts/">Districts</a>
+                </div>
+            </li>
+            <li>
+                <a href="https://shop.dpsmap.com/" target="_blank">Shop</a>
+            </li>
+            <li>
+                <a translate="no" href="https://dpsmap.com/contact/">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <!-- <div></div> -->
+    <div class="header">
+        <!-- <h2>Scroll Indicator</h2> -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+    </div>
+    
+<style>
+    .floating-button {
+        position: fixed; /* Makes it sticky */
+        right: 0; /* 0% from the right */
+        top: 40%; /* 40% from the top */
+        z-index: 1000; /* Ensures it's above other elements */
+    }
+</style>
+
+<div class="floating-button" style="z-index:1111111">
+    <!--<a style="" -->
+    <!--   class="btn btn-dark px-1 m-0" href="viber://chat?number=%2B959775204020" role="button"> -->
+    <!--    Order Book!-->
+    <!--</a>-->
+    <a style="" 
+       class="btn btn-dark px-1 m-0" href="https://eshop.dpsmap.com/" role="button"> 
+        Order Book!
+    </a>
+</div>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const progressBar = document.querySelector('.progress-bar');
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            progressBar.style.width = scrollPercentage + '%';
+        });
+    </script>
+    <!--  -->
+    <script>
+        function toggleDarkMode() {
+            var mainContent = document.querySelector('.main-content');
+            var darkM = document.querySelector('.darkM');
+            var mission = document.querySelector('.mission');
+            var darkMY = document.querySelector('.darkMY');
+            var ygntownshipmapbook = document.querySelector('#ygntownshipmapbook');
+            const section = document.querySelector('#body'); // Target the #body section
+             
+            mainContent.classList.toggle('bg-dark');
+            section.classList.toggle('bg-dark');
+            darkM.classList.toggle('bg-dark');
+            mission.classList.toggle('bg-dark');
+            ygntownshipmapbook.classList.toggle('bg-dark');
+            darkMY.classList.toggle('bg-dark');
+
+                        
+
+            // 
+//   const toggleButton = document.getElementById('darkModeToggle');
+
+//   // Toggle the dark mode class on the #body section
+//   section.classList.toggle('bg-dark');
+            // 
+        }
+    </script>
+
+
+    <!--  -->
+</div>
+
+        <style>
+    .blink {
+        background-color: white;
+        animation: blinker 3.5s linear infinite;
+        color: black;
+        text-shadow: 0.4px 0.3px black;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    @keyframes blinker {
+        50% {
+            /*opacity: 70;*/
+        }
+    }
+</style>
+<div class="mobile-header">
+    <!-- <div>-->
+    <!--          <marquee class="blink" scrollamount="4"> <span style="color:red">Breaking News:</span>(Unicode): Free map တွေ download ပေးနေတဲ့အစီအစဉ်က၂၀၂၄ အောက်တိုဘာလကုန်မှာပြီးတော့မှာဖြစ်လို့ အမြန်ဆုံးကိုယ်လိုအပ်တဲ့မြေပုံတွေdownloadရယူထားကြပါရန်... |  (English): The free map download program will end at the end of October 2024, so download the maps you need as soon as possible. </marquee>-->
+
+    <!--</div>-->
+    <div class="mobile-header-left">
+        <div class="mobile-nav-open">
+            <div class="d-flex justify-content-between align-items-center">
+                <i class="fa-solid fa-bars mt-2" style="cursor:pointer"></i>
+                <a class="ms-3 fs-3 text-decoration-none text-white" href="https://dpsmap.com/">Home</a> <span class="ms-2">|</span>
+                <a class="mx-3 fs-3 text-decoration-none text-white" href="https://dpsmap.com/yangon/">Yangon</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="mobile-header-center">
+            </div>
+    <div class="mobile-header-right">
+        <!--<div class="d-flex justify-content-between">-->
+            <!--<a class="me-3 fs-3 text-decoration-none" href="https://dpsmap.com/myanmar/">Myanmar</a>-->
+        <!--</div>-->
+        <div class="contact">
+            <span class="contact-icon">
+                <a href="tel:+959775204020">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </span>
+        </div>
+
+        <div class="contact">
+            <span class="contact-icon">
+                <a href="/cdn-cgi/l/email-protection#0e6a7e7d636f7e4e69636f6762206d6163" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </span>
+        </div>
+
+    </div>
+</div>
+<div class="mobile-navbar-container">
+    <div class="logo-container">
+        <a class="logo" href="https://dpsmap.com/"><img src="https://dpsmap.com/assets/favicon/favicon-512x512.png" loading="lazy" alt="dpsmap" />
+        </a>
+        <div class="heading">
+            <span class="main-heading">DPSMAP.COM </span>
+            <span class="sub-heading">Design Printing Services</span>
+        </div>
+    </div>
+    <ul class="mobile-navbar">
+        <li><a href="https://dpsmap.com/">Home</a></li>
+        <li><a href="https://dpsmap.com/pages/about-us/">About Us</a></li>
+        <li>
+            <a class="dropdown-toggle">Product & Services
+                <span class="angle-down"><i class="fa-solid fa-angle-down"></i></span></a>
+
+            <div class="custom-dropdown">
+                <a href="https://dpsmap.com/yangon/">Yangon Map</a>
+                <a href="https://dpsmap.com/myanmar/">Myanmar Map</a>
+                <a href="https://dpsmap.com/mandalay/">Mandalay Map</a>
+                <a href="https://dpsmap.com/naypyitaw/">Naypyitaw Map</a>
+                <a href="https://dpsmap.com/bago/">Bago Map</a>
+                <a href="https://dpsmap.com/1sqft/">1 SQFT</a>
+                <!--<a target="_blank" href="https://dpsmap.com/districts/">District</a>-->
+                <!--<a target="_blank" href="https://dpsmap.com/industrial/">Industrial</a>-->
+                <a href="https://dpsmap.com/mapplotting.php">Map Plotting</a>
+                <a href="https://dpsmap.com/printing-services/">Printing Service</a>
+                <a href="https://dpsmap.com/gis/">GIS Map</a>
+                <a href="https://dpsmap.com/tracking/">Tracking</a>
+                <a href="https://dpsmap.com/website-services/">Website Service By DPS</a>
+
+            </div>
+        </li>
+        <li>
+            <a href="https://shop.dpsmap.com/" class="dropdown-toggle" target="_blank">Shop
+                <span class="angle-down"></span></a>
+
+        </li>
+        <li>
+            <a href="https://dpsmap.com/contact/">Contact Us</a>
+        </li>
+
+        <li>
+            <a target="_blank" href="https://address.dpsmap.com/login.php">Address.dpsmap</a>
+        </li>
+
+        <!--27.11.2024-->
+        <li>
+            <a target="_blank" href="https://dpsmap.com/districts/">District</a>
+        </li>
+        <li>
+            <a target="_blank" href="https://dpsmap.com/industrial/">Industrial</a>
+        </li>
+        <!--27.11.2024-->
+
+        <li style="padding-bottom: 0px;">
+            <div class="header-contact-left">
+                <div class="contact">
+                    <span class="contact-icon" style="background:#0000ff">
+                        <a href="https://www.facebook.com/DPSMyanmar" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </span>
+                    <span class="contact-icon" style="background:#0a66c2;">
+                        <a href="https://www.linkedin.com/company/dpsmyanmar/" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </span>
+                    <span class="contact-icon" style="background:red;">
+                        <a href="https://www.youtube.com/@dpsco.ltd.3105" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="mobile-nav-close">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+</div>
+<!--order-->
+<!-- <div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style border"-->
+<!--  style="position: fixed; right: 0px; top: 350px;z-index:1111111">-->
+<!-- Button -->
+<!--  <a style="-->
+<!--        background-color: rgb(0, 0, 0);-->
+<!--        border-style: solid;-->
+<!--        color: #fff;-->
+<!--        display:grid;-->
+<!--        line-height: 18px;-->
+<!--        text-decoration: none;-->
+<!--        padding: 5px;-->
+<!--      " class="btn btn-primary" href="tel:+959775204020" role="button">Order Map !-->
+<!--  </a>-->
+<!--<img style="width: 100px;height:100px" src="../assets/images/yangon township map book.jpg" alt="" />-->
+<!--<a href="tel:+959775204020"><img src="../assets/images/yangon township map book.jpg" class="img-fluid w-25 h-25" style="max-height:160px;"></img></a>-->
+<!--</div>-->
+<!--<!-order--->
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const mobileNavOpen = document.querySelector(".mobile-nav-open");
+        const mobileNavClose = document.querySelector(".mobile-nav-close");
+        const mobileNavbar = document.querySelector(".mobile-navbar-container");
+        const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+        // Open mobile navbar
+        mobileNavOpen.addEventListener("click", function() {
+            mobileNavbar.classList.add("active");
+        });
+
+        // Close mobile navbar
+        mobileNavClose.addEventListener("click", function() {
+            mobileNavbar.classList.remove("active");
+        });
+
+        // Toggle dropdowns inside the navbar
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const dropdownMenu = this.nextElementSibling;
+                if (dropdownMenu) {
+                    dropdownMenu.style.display = dropdownMenu.style.display === "flex" ? "none" : "flex";
+                }
+            });
+        });
+
+        // Close navbar when clicking outside (optional)
+        document.addEventListener("click", function(event) {
+            if (!mobileNavbar.contains(event.target) && !mobileNavOpen.contains(event.target)) {
+                mobileNavbar.classList.remove("active");
+            }
+        });
+    });
+</script> -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const mobileNavOpen = document.querySelector(".mobile-nav-open");
+        const mobileNavClose = document.querySelector(".mobile-nav-close");
+        const mobileNavbar = document.querySelector(".mobile-navbar-container");
+        const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+        if (!mobileNavOpen || !mobileNavClose || !mobileNavbar) {
+            console.error("Mobile navigation elements not found!");
+            return;
+        }
+
+        // Open mobile navbar
+        mobileNavOpen.addEventListener("click", function() {
+            mobileNavbar.classList.add("active");
+        });
+
+        // Close mobile navbar
+        mobileNavClose.addEventListener("click", function() {
+            mobileNavbar.classList.remove("active");
+        });
+
+        // Toggle dropdown menus inside the navbar
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener("click", function(event) {
+                event.stopPropagation(); // Prevent event bubbling
+                this.classList.toggle("active");
+                const dropdownMenu = this.nextElementSibling;
+                if (dropdownMenu) {
+                    dropdownMenu.style.display = dropdownMenu.style.display === "flex" ? "none" : "flex";
+                }
+            });
+        });
+
+        // Close navbar when clicking outside (optional)
+        document.addEventListener("click", function(event) {
+            if (!mobileNavbar.contains(event.target) && !mobileNavOpen.contains(event.target)) {
+                mobileNavbar.classList.remove("active");
+            }
+        });
+    });
+</script>    </section>
+
+    <!-- body area -->
+    <section id="body">
+        
+<!--         <section id="promo-hero" class="promo-section">-->
+<!--  <div class="promo-image-layer"></div>-->
+  
+<!--  <div class="container content-overlay">-->
+<!--    <div class="row justify-content-center">-->
+<!--      <div class="col-lg-8 col-md-10 text-center">-->
+        
+<!--        <div class="promo-tag mb-2">-->
+<!--          PROMOTION SALE-->
+<!--        </div>-->
+
+<!--        <h2 class="fw-bold text-white mb-1" style="font-size: 2rem;">-->
+<!--          ရန်ကုန် နှင့် မြန်မာပြည် <span class="blue-glow">မြေပုံများ</span>-->
+<!--        </h2>-->
+        
+<!--        <div class="discount-pill mb-3">-->
+<!--          အထူးဈေးနှုန်း <span class="text-yellow">50% လျော့ဈေး</span>-->
+<!--        </div>-->
+
+<!--        <div class="glass-container mx-auto">-->
+<!--          <p class="small text-white-50 mb-2" style="font-size: 0.85rem;">-->
+<!--            Promotion ကာလ - <span class="text-white fw-bold">2026 Jan 15</span> အထိသာ-->
+<!--          </p>-->
+          
+<!--          <div class="row g-2">-->
+<!--            <div class="col-12">-->
+<!--              <a href="https://www.facebook.com/share/1KwmJE5ain/" class="btn btn-main-blue w-100 py-2 mb-1">-->
+<!--                ဝယ်ယူရန်-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div class="col-6">-->
+<!--              <a href="tel:09775204020" class="btn btn-glass-blue w-100 py-2">-->
+<!--                <i class="bi bi-telephone-fill"></i> Call Viber-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<style>
+.promo-section {
+  position: relative;
+  /* Reduced height and padding */
+  min-height: 350px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px 0; /* Minimized top/bottom padding */
+}
+
+.promo-image-layer {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('images/satellite.jpg'); 
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.promo-image-layer::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, rgba(0, 32, 74, 0.75) 0%, rgba(0, 10, 30, 0.9) 100%);
+  z-index: 2;
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 3;
+}
+
+.blue-glow {
+  color: #00d4ff;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+.promo-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  padding: 2px 12px;
+  border-radius: 4px;
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.discount-pill {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.text-yellow {
+  color: #ffc107;
+}
+
+.glass-container {
+  max-width: 380px; /* Slightly narrower */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px; /* Reduced internal padding */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.btn-main-blue {
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
+  transition: 0.2s;
+}
+
+.btn-main-blue:hover {
+  background: #00d4ff;
+  color: #001432;
+}
+
+.btn-glass-blue {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+</style> 
+        <!---->
+        <br>
+        <div class="container align-center shadow" style=" overflow: hidden;">
+            <!-- Advertisement Section -->
+            <a target="_blank" href="https://yangontownshipmapbook.dpsmap.com/">
+                <h1 class="sub-heading fs-2" style="color: var(--main-accent-color);text-shadow:1px 2px 2px yellow;">Yangon Township Map Book (2025) is available now !</h1>
+            </a>
+            <div class="col-12 h-100">
+                <div>
+                    <a target="_blank" href="https://yangontownshipmapbook.dpsmap.com/">
+                        <img src="../../assets/images/crop%20ygn.jpg" alt="Advertisement" class="w-100 img-fluid" style="height: 100%; object-fit: cover;">
+                        <!--../assets/images/crop%20ygn.jpg-->
+                    </a>
+                    <p>Price 35000mmk</p>
+                </div>
+            </div>
+        </div>
+        <!---->
+       
+        <div class="company-profile">
+            <div class="custom-heading">
+                <div class="main-heading">
+                    About Us
+                </div>
+                <div class="sub-heading">
+                    Who Are We?
+                </div>
+            </div>
+            <div class="company-profile-wrapper">
+                <div class="company-profile-left">
+                    <div class="description">
+                        Design Printing Services (DPS) Company Limited – – incorporated in 1995 – published its landmark Map of Yangon a.k.a “Street Directory of Yangon” in 1996.
+                        At that time, the government is the only organization which prepares and maintains those maps.
+                        Normally they do it by hand and very difficult to update.
+                        <br />
+                        Moreover maps from the government are not readily available. D.P.S started digitizing the map of Yangon (Rangoon) from British era maps.
+                        Then it acquired Intergraph’s Geomedia software along with IRS Panchromatic satellite imagery from Intergraph.
+                        The satellite scenes are geocoded using Trimble’s Pro XR gps and then digitized by D.P.S.
+                        <br />
+                        D.P.S also developed Yangon GIS data warehouse complete with streets,
+                        schools, clinics, government offices, water and river, and last but not least – a Business Database. Our strong point is thus in creating
+                        and updating GIS database – digitization and data entry,
+                        GPS survey and map publishing. We have also developed Vehicle Tracking System using GPS and Compatible maps to manage transport fleets.
+                    </div>
+                </div>
+                <div class="company-profile-right">
+                    <img src="/assets/images/mapillary.png" alt="Mapillary">
+                    <div class="description">
+                        ရန်ကုန်မြို့ရဲ့ လမ်းများကို 360 ပုံစံဖြင့် ကြည့်ရှုလိုပါက အောက်ရှိ Button ကိုနှိပ်ပါ
+                    </div>
+                    <a href="http://bit.ly/DPS360" class="button" target="_blank">Button</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!---->
+         <div class="company-profile">
+            <div class="custom-heading">
+                <div class="main-heading">
+                    Why DPS?..
+                </div>
+                <div class="sub-heading">
+                    DPS ရဲ့ service တွေကို ဘာကြောင့်သုံးစွဲသင့်တာလဲ?..
+                </div>
+                <div class="company-profile-wrapper">
+                    <div class="description">
+                        Design Printing Service Co.,Ltd ကို ၁၉၉၅ ခုနှစ်မှာစတင်ဖွဲ့စည်းခဲ့ပြီး ၁၉၉၆ ခုနှစ်မှာတော့ ရန်ကုန်မြို့၏ အထင်ကရမြေပုံ ဖြစ်သည့် “ရန်ကုန်လမ်းညွန်မြေပုံ” ကို ထုတ်ဝေနိုင်ခဲ့ပါတယ်။ ဒီနေ့အချိန်အထိ Geographical Information System (GIS) နည်းပညာနှင့် Data warehouse များအသုံးပြုပြီး တိုင်းနှင့်ပြည်နယ်မြေပုံများ၊ ၂၀၂၂ ခရိုင်မြေပုံများ၊ မြို့နယ်အကွက်ချမြေပုံများကိုလည်း ဆက်လက်ရေးဆွဲထုတ်ဝေလျှက်ရှိပြီး UNESCO, American Embassy, India Embassy, ESRI, TomTom, HERE, GrabTaxi နှင့် အစိုးရဌာနများနှင့် လက်တွဲလုပ်ဆောင်ခဲ့ပြီး ယုံကြည်မှုရရှိထားသော မြန်မာနိုင်ငံ၏ မြေပုံနှင့် GIS ကုမ္ပဏီတစ်ခုလည်းဖြစ်ပါတယ်။
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!---->
+
+        <div class="company-profile ">
+
+            <!-- <canvas id="pdf-canvas"></canvas>
+            <div class="page-controls">
+                <button onclick="prevPage()">Previous</button>
+                <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+                <button onclick="nextPage()">Next</button>
+            </div> -->
+            <div class="" style="color:rgba(5, 76, 164);">
+                <h3 class="fs-4 fw-bold text-primary mb-3">DPSmap's Navigating the Complex Digital Landscape of Current Myanmar</h3>
+
+                <!-- <h1>DPSmap
+                </h1>
+                <h4>Navigating the Complex Digital Landscape of Current Myanmar</h4> -->
+            </div>
+
+            <div class="page-content" id="page-content"></div>
+
+            <div class="page-controls">
+                <button onclick="prevPage()">Previous</button>
+                <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+                <button onclick="nextPage()">Next</button>
+            </div>
+
+            <!--  -->
+            <div class="bg-white p-3 rounded-3 shadow-sm overflow-x-auto" id="table-container" style="margin-bottom:2rem;">
+                <h3 class="fs-4 fw-bold text-primary mb-3">DPSmap's Core Data Assets and Services</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover align-middle mb-0">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col">Category</th>
+                                <th scope="col">Specific Assets/Services</th>
+                                <th scope="col">Scale/Coverage</th>
+                                <th scope="col">Unique Selling Proposition/Capabilities</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GIS Data Assets</td>
+                                <td>Myanmar Road Network, Villages Points, Address Points (APs), Points of Interest (POIs), House Numbers</td>
+                                <td>Countrywide, Yangon City, Yangon Region, specific townships (e.g., Kyeemyindaing, Hlaing, South Okkalapa, North Okkalapa, Mayangone, Insein)</td>
+                                <td>
+                                    <ul class="mb-0 ps-3">
+                                        <li>Address Database with House numbers guaranteed to exceed any available online data</li>
+                                        <li>300,000+ APs for Yangon and Mandalay</li>
+                                        <li>Myanmar's only mapping company with an address database for cities</li>
+                                        <li>60,000 POIs for various applications</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Township Demographics, Street Maps, Street Names, Landmarks</td>
+                                <td>Specific townships</td>
+                                <td>Detailed local demographic and place information</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Natural Geographical Features (Rivers, Lakes)</td>
+                                <td>Countrywide</td>
+                                <td>Comprehensive mapping of natural features</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Man-made Features (Airfields, Lighthouses, Cities, Railways, Roads)</td>
+                                <td>Countrywide</td>
+                                <td>Extensive mapping of critical infrastructure and urban areas</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Political Features (Township Boundaries, State and Region Boundaries)</td>
+                                <td>Countrywide</td>
+                                <td>Foundational administrative boundary data</td>
+                            </tr>
+                            <tr>
+                                <td>Specialized GIS Services</td>
+                                <td>Fiber Network Design & Management</td>
+                                <td>Project-specific</td>
+                                <td>
+                                    <ul class="mb-0 ps-3">
+                                        <li>Network layout estimation</li>
+                                        <li>Work allocation, obstacle avoidance</li>
+                                        <li>Database storage for infrastructure elements</li>
+                                        <li>Maintenance tracking</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Advanced Data Acquisition</td>
+                                <td>Project-specific</td>
+                                <td>Aerial Photo updates with Drones for Farm Land and Site Plans</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>GPS Tracking Systems</td>
+                                <td>Various</td>
+                                <td>Vehicle trackers with cameras for real-time video</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Data Collection Services</td>
+                                <td>Project-specific</td>
+                                <td>Point of Address data, shop database for distribution, general address data</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Website Services</td>
+                                <td>Project-specific</td>
+                                <td>Professional website design, online shops, blogs</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Map Plotting Services</td>
+                                <td>Project-specific</td>
+                                <td>Customized, high-resolution maps for decoration</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Design & Printing Services</td>
+                                <td>In-house</td>
+                                <td>Color leaflets, business cards, promotion materials, brand materials</td>
+                            </tr>
+                            <tr>
+                                <td>General GIS/Mapping Capabilities</td>
+                                <td>Data Projection: Lat/Long (Decimal Degrees), Datum: WGS 84, Delivery Media: FTP</td>
+                                <td>Standard</td>
+                                <td>Ensures compatibility and accessibility for various applications</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Benefits Highlighted</td>
+                                <td>Universal</td>
+                                <td>
+                                    <ul class="mb-0 ps-3">
+                                        <li>Cost savings</li>
+                                        <li>Better decision making</li>
+                                        <li>Improved communication</li>
+                                        <li>Better geographic information recordkeeping</li>
+                                        <li>Managing geographically</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Map Production and Publishing</td>
+                                <td>Various cities</td>
+                                <td>Yangon Township Map Book 2024 (officially recognized), Mandalay, Naypyitaw, etc.</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Hard copy and Soft copy availability</td>
+                                <td>N/A</td>
+                                <td>Soft copies in PDF (resolution free) and JPG</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+        <div class="company-profile">
+            <div class="custom-heading">
+                <div class="sub-heading">
+                    Myanmar Works Hard to Keep the Internet Out
+                </div></br>
+                <div class="description">
+                    In downtown Yangon, Internet entrepreneur Aye Min Oo is busy selling space on a Web site that he cannot access.
+                    To woo advertisers who are also forbidden to access the World Wide Web in military-ruled Myanmar, formerly Burma, he transports his tourist-oriented Web site's pages the old-fashioned way.
+                    </br>
+                    "I travel around Yangon and demonstrate the pages on the hard drive of my laptop," he said. "We e-mail new pages to the webmaster in Belgrade. Hopefully, some day we will see it online here ourselves."
+                    </br>
+                    Aye Min Oo's roundabout access to the Internet may not be ideal, but it is a rare privilege in isolated Myanmar, a Southeast Asian country of 48 million people where some of the world's toughest Internet restrictions are vigorously enforced.
+                    </br>
+                    The measures, aimed at fending off the online campaigns of exiled Burmese opposition groups, restrict e-mail access to fewer than a thousand people who are close to the ruling party, the State Peace and Development Council (SPDC).
+                    </br>
+                    Access to the World Wide Web is strictly banned, and unauthorized use of a modem is punishable by 7 to 15 years in jail.
+                    </br>
+                    Just one other Web site operates consistently from the country, which has been widely condemned for human rights violations and the suppression of democracy. It is the government's own site, which is only available outside the country. It features tourist and army news in four languages, along with regular fiery criticism of opposition leader Aung San Suu Kyi, whose National League for Democracy party won a 1990 election that the military refused to recognize.
+                    </br>
+                    In the decade since then, thousands of democracy activists have been jailed or have fled the country once known as the "rice-bowl of Asia," now one of the world's poorest.
+                    </br>
+                    Among Yangon's tiny, struggling expatriate and business communities, where the daily struggles are with boredom and marginalization, the lure of the Internet has been hard to resist. Dialing into foreign servers is an obvious if illegal route for frustrated staff members at embassies and other organizations.
+                    </br>
+                    Crd : <a href="https://archive.nytimes.com/www.nytimes.com/library/tech/00/07/cyber/articles/14myanmar.html">The New York Times</a>;
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="valued-clients">
+            <div class="custom-heading">
+                <div class="main-heading">
+                    <a href="https://dpsmap.com/valuedclients/#THESIS">
+                        GIS THESIS
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="valued-clients">
+            <div class="custom-heading">
+                <div class="main-heading">
+                    Our Valued Clients
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-container">
+                    <a href="/valuedclients/tomtom.php">
+                        <img src="/assets/images/about-us/tomtom.png" alt="tomtom">
+                    </a>
+                </div>
+
+                <div class="image-container">
+                    <a href="/valuedclients/here.php">
+                        <img src="/assets/images/about-us/here.png" alt="here">
+                    </a>
+                </div>
+
+                <div class="image-container">
+                    <a href="/valuedclients/esri.php">
+                        <img src="/assets/images/about-us/esri.png" alt="esri">
+                    </a>
+                </div>
+
+                <div class="image-container">
+                    <a href="/valuedclients/grab.php">
+                        <img src="/assets/images/about-us/grab.png" alt="grab">
+                    </a>
+                </div>
+
+                <div class="image-container">
+                    <a href="/valuedclients/unilever.php">
+                        <img src="/assets/images/about-us/unileverlogo.png" alt="unileverlogo">
+                    </a>
+                </div>
+
+                <div class="image-container">
+                    <a href="/valuedclients/redcross.php">
+                        <img src="/assets/images/about-us/redcrosslogo.png" alt="redcrosslogo">
+                    </a>
+                </div>
+
+                </br>
+                </br>
+                <div class="about-us-row">
+                    <a href="https://dpsmap.com/valuedclients/">
+                        <img src="/assets/images/about-us/valueclients.jpg" alt="valuedclients">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!---->
+          <div class="valued-clients">
+            <div class="custom-heading">
+                <div class="main-heading">
+                    Collaboration With Education institution
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfodzO-XlJjuQXMJ4oHsYdf0Mxt4aaul-vcQ&s" alt="nmdc">
+                </div>
+
+                <div class="image-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSsSh3sITn280Kbi1g241YFtBaKEBh0WyI3FWXG0tvWbz3c3DIxG6DCcC43I1c3oQrkFI" alt="cu(myeik)">
+                </div>
+
+            </div>
+        </div>
+        <!---->
+
+        <div class="valued-clients">
+            <div class="custom-heading">
+                <div class="main-heading">
+                    Web Hosting
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/digitalocean.png" alt="digitalocean">
+                </div>
+
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/godaddy.png" alt="godaddy">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="valued-clients">
+            <div class="custom-heading">
+                <div class="main-heading">
+                    Web development technology
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/html5.png" alt="html5">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/css3.png" alt="css3">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/JavaScript.png" alt="JavaScript">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/php.png" alt="php">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/nodejs.png" alt="nodejs">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/bootstrap.png" alt="bootstrap">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/django.png" alt="django">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/fetchapi.png" alt="fetchapi">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/jquery.jpg" alt="jquery">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/laravel.png" alt="laravel">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/mongodb.jpg" alt="mongodb">
+                </div>
+                <div class="image-container">
+                    <img src="https://www.elbuild.it/assets/img/techs/mysql.png" alt="mysql">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/nginx.png" alt="nginx">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/zoho.png" alt="zoho">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/wordpress.png" alt="wordpress">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/wix.png" alt="wix">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/shopify.png" alt="shopify">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/woocommerce.png" alt="woocommerce">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/HubSpot.jpg" alt="HubSpot">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/web-hosting/logo_gs_chart.png" alt="logo_gs_chart.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="valued-clients">
+            <div class="custom-heading">
+                <div class="main-heading">
+                    GIS Mapping Technology
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="/assets/images/gis-tech/arcgis.png" alt="arcgis">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/gis-tech/global.jpeg" alt="global">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/gis-tech/google_earth-pro.png" alt="google-earth">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/gis-tech/goolgemap.png" alt="goolgemap">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/gis-tech/osm.jpeg" alt="osm">
+                </div>
+                <div class="image-container">
+                    <img src="/assets/images/gis-tech/qgis.png" alt="qgis">
+                </div>
+                 <div class="image-container"><a href="leaflet.html">
+                    <img src="https://leafletjs.com/docs/images/logo.png" alt="leaflet"></a>
+                </div>
+            </div>
+
+            <div class="valued-clients">
+                <div class="custom-heading">
+                    <div class="main-heading">
+                        Graphic Design Technology
+                    </div>
+                </div>
+                <div class="image-row">
+                    <div class="image-container">
+                        <img src="/assets/images/gis-tech/adobe-indesign.png" alt="adobe-indesign">
+                    </div>
+                    <div class="image-container">
+                        <img src="/assets/images/gis-tech/adobe_illustrator.png" alt="adobe_illustrator">
+                    </div>
+                    <div class="image-container">
+                        <img src="/assets/images/gis-tech/adobe_photoshop.png" alt="adobe_photoshop">
+                    </div>
+                   
+                </div>
+                <!---->
+                <div class="valued-clients container-fluid">
+                    <div class="custom-heading">
+                        <div class="main-heading">
+                            Our Intership Program
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="intern">
+                    <div class="col-lg-4 col-md-4 d-none d-md-block mt-1">
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDPSMyanmar%2Fposts%2Fpfbid02peXrPncigqCnKLkMThc1Ep14zZFxJX9nFzvWmWaQWtfqjrUMA5c5SPXTw3v7s3pTl&show_text=true&width=500"
+                            width="100%" height="500" style="border:none;overflow:hidden"
+                            scrolling="no" frameborder="0" allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-none">
+                        <div style="width:100%;height: 500px; overflow-y: scroll; border: 1px solid #ccc;" class="m-2">
+                            <div class="p-3 mb-1">
+                                <!--<div class="" style="position:sticky;top: 0;display:inline-block">-->
+     <h1 class="fs-4 text-decoration-underline" style=""><a class="text-black" href="#intern">DPS ရဲ့ Internship Program 2026အခွင့်အရေး</a></h1>
+                                <!--</div>-->
+                                <br>
+                                နွေရာသီ တက္ကသိုလ်ပိတ်ရက်တွေမှာ company လုပ်ငန်းအတွေ့အကြုံလိုချင်တဲ့ လူငယ်တွေအတွက် DPS ကနေ office intern (10) ဦးခေါ်ယူသွားမှာ ဖြစ်ပါတယ်! <br>
+                                <br>
+                                <strong>ဘာကြောင့်လျှောက်သင့်တာလဲ?</strong><br>
+                                ဒီ internship program မှာ DPS ရဲ့ Marketing Department အပြင် GIS Department, IT Department တွေမှာပါ လုပ်ငန်းအတွေ့အကြုံတွေရယူနိုင်မှာဖြစ်ပါတယ်။<br>
+                                <br>
+                                <strong>Training ‌တွေအနေနဲ့ GIS Department ကနေ</strong><br>
+                                🔸 Data Collection<br>
+                                🔸 Data Preparation<br>
+                                🔸 Data Analysis <br>
+                                🔸 Mapping <br>
+                                (Tools : Google Earth pro, Google Mymap, GIS, Excel, Photoshop, AI, Adobe Illustrator, Indesign)<br>
+                                <br>
+                                <strong>IT Department ကနေ</strong><br>
+                                🔸 Basic Website Service <br>
+                                🔸 GPS tracker installation<br>
+                                <br>
+                                <strong>Sale & Marketing Department ကနေ</strong><br>
+                                🔸 Digital Marketing <br>
+                                🔸 Basic Graphic Design<br>
+                                🔸 Content Creation<br>
+                                🔸 Distribution<br>
+                                🔸 Sale & Customer Service<br>
+                                🔸 Market Research<br>
+                                🔸 AI အသုံးချနည်း စတဲ့ training တွေကိုပါ တက်ရောက်နိုင်မှာဖြစ်ပါတယ်။<br>
+                                <br>
+                                <strong>ဘာတွေလိုအပ်လဲ?</strong><br>
+                                🔹 သင်ယူလိုစိတ်၊ ကြိုးစားချင်စိတ်ရှိသူဖြစ်ရပါမယ်။<br>
+                                🔹 English စာအရည်အချင်း အသင့်အတင့်ရှိရပါမယ်။<br>
+                                🔹 Computer သုံးပြီး အလုပ်လုပ်ကိုင်ခြင်းတွေနဲ့ ရင်းနှီး‌ထိတွေ့နေရသူဖြစ်ပါမယ်။<br>
+                                🔹 Fresh Graduates များ၊ တက္ကသိုလ်တစ်ပိုင်းတစ်စ ဖြစ်နေသူများကို ပိုမိုဦးစားပေးပါမယ်။<br>
+                                <br>
+                                - internship ကာလ ပြီးဆုံးတဲ့အထိ တာဝန်ထမ်းဆောင်ပါက အလုပ်လုပ်ဖူးကြောင်း certificate လိုချင်သူများကိုလည်း နောက်ပိုင်းအလုပ်အကိုင်အခွင့်အရေးများအတွက် အထောက်အကူဖြစ်အောင် ထုတ်ပေးသွားမှာလည်းဖြစ်ပါတယ်။<br>
+                                - Internship ကာလမှာ ကြိုးစားလုပ်ကိုင်နိုင်ပြီး အရည်အချင်းပြည့်မှီသူများကိုလည်း permanent အဖြစ်ခန့်အပ်သွားမှာဖြစ်ပါတယ်။<br>
+                                <br>
+                                လျှောက်ထားလိုသူများ ဒီအောက်က Form ကိုပြည့်စုံစွာဖြည့်စွက်ပြီး လျှောက်ထားနိုင်ပါတယ်!<br>
+                                <button style="" class="float-start m-1 btn-sm">
+                                    <a class="text-decoration-underline text-black" href="https://myanmar.ca/intern/" target="_blank">2025 Batch</a>
+                                </button>
+                                 <button style="" class="float-start m-1 btn-sm">
+                                                                    <a class="text-decoration-underline text-black" href="https://myanmar.ca/intern/2025/06/25/ai-knowledge-collection/" target="_blank">2025 Batch (AI)</a>
+ </button>
+                                <br>
+                                <br>
+                                <div class="bg-dark shadow p-2" style="">
+                                    <strong class="text-decoration-underline">Working Hour</strong><br>
+                                    > Mon - Fri 9 am to 5 pm<br>
+                                    > Sat - work from home<br>
+                                    Off day - Sunday & Public Holiday<br>
+                                    Internship Period - ၃ လ<br>
+                                    Location - <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x30c1ec87aa67d8a3:0xfc0601241550cd7c?source=g.page.share">အခန်း 307 ၊ ရေကျော်ဈေးကွန်ဒို၊ ရေကျော်လမ်း၊ ပုစွန်တောင်မြို့နယ်၊ ရန်ကုန်။</a><br>
+                                    <br>
+                                </div>
+                                <!--#internship<br>-->
+                                <!--#jobinyangon<br>-->
+                                <!--#hiring<br>-->
+                                <!--#dpsmyanmar-->
+                            </div>
+                            <!--<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDPSMyanmar%2Fposts%2Fpfbid02peXrPncigqCnKLkMThc1Ep14zZFxJX9nFzvWmWaQWtfqjrUMA5c5SPXTw3v7s3pTl&show_text=true&width=500" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>-->
+                        </div>
+                    </div>
+                    <!-- <div class="image-row">-->
+                    <!--    <div class="image-container">-->
+                    <!--        <img src="/assets/images/gis-tech/adobe-indesign.png" alt="adobe-indesign">-->
+                    <!--    </div>-->
+                    <!--    <div class="image-container">-->
+                    <!--        <img src="/assets/images/gis-tech/adobe_illustrator.png" alt="adobe_illustrator">-->
+                    <!--    </div>-->
+                    <!--    <div class="image-container">-->
+                    <!--        <img src="/assets/images/gis-tech/adobe_photoshop.png" alt="adobe_photoshop">-->
+                    <!--    </div>-->
+                    <!--    <div class="image-container">-->
+                    <!--        <img src="/assets/images/gis-tech/" alt="">-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <!---->
+                </div>
+                <!---->
+                <!--           <div class="container my-3">-->
+                <!--           <div class="tabs d-flex flex-wrap border-bottom">-->
+                <!--             <div class="tab active" onclick="showTabContent('main-dataset')">-->
+                <!--               Main Dataset-->
+                <!--             </div>-->
+                <!--             <div class="tab" onclick="showTabContent('available-datasets')">-->
+                <!--               Available Datasets-->
+                <!--             </div>-->
+                <!--             <div class="tab" onclick="showTabContent('available-format')">-->
+                <!--               Available Format-->
+                <!--             </div>-->
+                <!--             <div class="tab" onclick="showTabContent('price-license')">-->
+                <!--               Price and License-->
+                <!--             </div>-->
+                <!--             <div class="tab" onclick="showTabContent('category-a')">-->
+                <!--               Category (A)-->
+                <!--             </div>-->
+                <!--             <div class="tab" onclick="showTabContent('category-b')">-->
+                <!--               Category (B)-->
+                <!--             </div>-->
+                <!--             <div class="tab" onclick="showTabContent('category-c')">-->
+                <!--               Category (C)-->
+                <!--             </div>-->
+                <!--             <div class="tab" onclick="showTabContent('category-d')">-->
+                <!--               Category (D)-->
+                <!--             </div>-->
+                <!--           </div>-->
+
+                <!-- Tab Content -->
+                <!--           <div id="main-dataset" class="tab-content active">-->
+                <!--             <ul>-->
+                <!--               <li>Street map</li>-->
+                <!--               <li>Street names</li>-->
+                <!--               <li>Landmarks / Places (Moderated by DPS)</li>-->
+                <!--             </ul>-->
+                <!--           </div>-->
+                <!--           <div id="available-datasets" class="tab-content">-->
+                <!--             <li>-->
+                <!--               Township Demographics (33 Townships + Thanlyin) Banks Healthcare-->
+                <!--               Centers Government offices Hotels and restaurants Retail Shops-->
+                <!--               (Customized survey)-->
+                <!--             </li>-->
+                <!--           </div>-->
+                <!--           <div id="available-format" class="tab-content">-->
+                <!--             <li>DXF Shape file (Arc Info) MapInfo/ MIF Geomedia</li>-->
+                <!--           </div>-->
+                <!--           <div id="price-license" class="tab-content">-->
+                <!--             <li>Prices vary according to the following categories.</li>-->
+                <!--             <li>-->
+                <!--               Please contact us for your specific requirements and we will-->
+                <!--               prepare a quote for you.-->
+                <!--             </li>-->
+                <!--           </div>-->
+                <!--           <div id="category-a" class="tab-content">-->
+                <!--             <ul>-->
+                <!--               <li>Lanmadaw</li>-->
+                <!--               <li>Kyauktada</li>-->
+                <!--               <li>Pabedan</li>-->
+                <!--               <li>Latha</li>-->
+                <!--               <li>Botahtaung</li>-->
+                <!--               <li>Pazundaung</li>-->
+                <!--               <li>Dagon Seikkan</li>-->
+                <!--             </ul>-->
+                <!--           </div>-->
+                <!--           <div id="category-b" class="tab-content">-->
+                <!--             <ul>-->
+                <!--               <li>Kyeemyindaing</li>-->
+                <!--               <li>Ahlone</li>-->
+                <!--               <li>Bahan</li>-->
+                <!--               <li>Sanchaung</li>-->
+                <!--               <li>Mingalar</li>-->
+                <!--               <li>Taungnyunt</li>-->
+                <!--               <li>Tarmwe</li>-->
+                <!--               <li>Kamayut</li>-->
+                <!--               <li>Yankin</li>-->
+                <!--             </ul>-->
+                <!--           </div>-->
+                <!--           <div id="category-c" class="tab-content">-->
+                <!--             <ul>-->
+                <!--               <li>Kyeemyindaing</li>-->
+                <!--               <li>Hlaing</li>-->
+                <!--               <li>South Okkalapa</li>-->
+                <!--               <li>North Okkalapa</li>-->
+                <!--               <li>Mayangone</li>-->
+                <!--               <li>Insein</li>-->
+                <!--             </ul>-->
+                <!--           </div>-->
+                <!--           <div id="category-d" class="tab-content">-->
+                <!--             <ul>-->
+                <!--               <li>Thaketa</li>-->
+                <!--               <li>Dawbon</li>-->
+                <!--               <li>Dagon Seikkan</li>-->
+                <!--               <li>South Dagon</li>-->
+                <!--               <li>North Dagon</li>-->
+                <!--               <li>East Dagon</li>-->
+                <!--               <li>Shwe Paukkan</li>-->
+                <!--               <li>Mingalardon</li>-->
+                <!--               <li>Hlaing Tharyar</li>-->
+                <!--               <li>Shwe Pyithar</li>-->
+                <!--               <li>Dala</li>-->
+                <!--             </ul>-->
+                <!--           </div>-->
+                <!--         </div>-->
+                <!--<script>-->
+                <!--     function showTabContent(id) {-->
+                <!--       const contents = document.querySelectorAll(".tab-content");-->
+                <!--       contents.forEach((content) => content.classList.remove("active"));-->
+
+                <!--       const tabs = document.querySelectorAll(".tab");-->
+                <!--       tabs.forEach((tab) => tab.classList.remove("active"));-->
+
+                <!--       document.getElementById(id).classList.add("active");-->
+                <!--       event.target.classList.add("active");-->
+                <!--     }-->
+                <!--   </script>-->
+                <!---->
+                <!--       </div>-->
+
+                <!--    <div class="row">-->
+                <!--        <div class="col"><img class="img-fluid" style="height:200px;width:200px" src="https://www.sbu.edu.mm/wp-content/uploads/2023/09/favicon.png">-->
+                <!--</div>-->
+                <!--  <div class="col"><img class="img-fluid" style="height:200px;width:200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLndwH7H_P5jP1dZS5Lrl-3uUyCSCW-9FKyQ&s">-->
+                <!--</div>-->
+
+
+            </div>
+
+
+    </section>
+
+    <section id="footer">
+        <style>
+    a{
+        text-decoration: underline;
+    }
+    #scrollTopBtn:hover {
+  background-color: #0056b3;
+}
+
+</style>
+
+    <!--<script src='https://cdn.jotfor.ms/agent/embedjs/0199c16f8aff70e196a65c207689193d99eb/embed.js'></script>-->
+    <!--<script src='https://cdn.jotfor.ms/agent/embedjs/0199c6f613b77f338047183e31c049c2e1cc/embed.js'></script>
+  
+   <!-- <script src='https://cdn.jotfor.ms/agent/embedjs/019aa5567db57b9da161ac56046ea15b0727/embed.js'> -->
+    <script src='https://cdn.jotfor.ms/agent/embedjs/0199c6f613b77f338047183e31c049c2e1cc/embed.js'>
+</script>
+</script>
+</script>
+
+
+
+<button id="scrollTopBtn" style="position: fixed; bottom: 20px; left: 20px; display: none; padding: 5px 10px; background-color: black; color: white; border: none; border-radius: 1px; cursor: pointer;z-index:1111111">
+    
+  <!--<i class="fa-solid fa-arrow-up" style="color:white">-->
+      <i class="fa-solid fa-arrow-up fa-bounce" style="color:white"></i>
+  </i>
+</button>
+<div class="footer-container">
+    <div class="footer">
+        <div class="far-left footer-content">
+            <div class="heading">
+                <span>Products & Services</span>
+            </div>
+
+            <div class="far-left-links-container">
+                <div class="custom-links-column">
+                    <a href="https://dpsmap.com/pages/map-download/">Free Map Download</a>
+                    <a target="_blank" href="https://yangontownshipmapbook.dpsmap.com/" >Yangon Township Map Book</a>
+                    <a href="https://dpsmap.com/myanmar/#en">Myanmar Map (ENG)</a>
+                    <a href="https://dpsmap.com/myanmar/#mm">Myanmar Map (MM)</a>
+                    <a href="https://dpsmap.com/mandalay/">Mandalay Map</a>
+                    <a href="https://dpsmap.com/pyinoolwin/">Pyinoolwin Map</a>
+                    <a href="https://dpsmap.com/amarapura/">Amarapura Map</a>
+                    <a href="https://dpsmap.com/taunggyi/">Taunggyi Map</a>
+                    <a href="https://dpsmap.com/sittwe/">Sittwe Map</a>
+                    <a href="https://shop.dpsmap.com/">Shop</a>
+                    <a href="https://dpsmap.com/map/">Map</a>
+                    <a href="https://dpsmap.com/mon/">Mon Map</a>
+                    <a href="https://dpsmap.com/touristmap/">Tourist Map</a>
+                    <a href="https://dpsmap.com/kachin/">Kachin Map</a>
+                    <a href="https://dpsmap.com/kayah/">Kayah Map</a>
+                    <a href="https://dpsmap.com/shan/">Shan Map</a>
+
+                </div>
+                <div class="custom-links-column">
+                    <a href="https://flood.firetree.net/?ll=16.8059,96.1628&zoom=10&m=5" target="_blank">Flood Simulation</a>
+                    <a href="https://dpsmap.com/1sqft/">1SQFT</a>
+                    <a href="https://dpsmap.com/bago/">Bago Map</a>
+                    <a href="https://dpsmap.com/yangon/">Yangon Map</a>
+                    <a href="https://dpsmap.com/naypyitaw/">Naypyitaw Map</a>
+                    <a href="https://dpsmap.com/pyinmana/pyinmana.shtml">Pyinmana Map</a>
+                    <a href="https://dpsmap.com/bagan/">Bagan Map</a>
+                    <a href="https://dpsmap.com/mrauku/">Mrauk-U Map</a>
+                    <a href="https://dpsmap.com/mawlamying/">Mawlamyaing Map</a>
+                    <a href="https://dpsmap.com/inlay/">Inlay Map</a>
+                    <a href="https://dpsmap.com/kyaiktiyo/">Kyaiktiyo Map</a>
+                    <a href="https://dpsmap.com/magway/">Magway Map</a>
+                    <a href="https://dpsmap.com/rakhine/">Rakhine Map</a>
+                    <a href="https://dpsmap.com/ayeyarwaddy/">Ayeyarwaddy Map</a>
+                    <a href="https://dpsmap.com/chin/">Chin Map</a>
+                    <a href="https://dpsmap.com/sagaing/">Sagaing Map</a>
+                    <a href="https://dpsmap.com/enchantingmyanmar/">Enchanting Myanmar</a>
+                    <a href="https://dpsmap.com/businesslist/">Business List</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="left footer-content">
+             
+             <a href="https://dpsmap.com/form105/" target="_blank">Form (105), Form (7) Land Tenure
+             </a>
+             
+            <div class="about-us-row">
+                   <a href="https://dpsmap.com/form105/">
+                    <img src="/assets/images/bg-arts/about_map_update.webp" alt="form105 Photo,ပုံစံ ၁၀၅" class="responsive"/>
+                    </a>
+              </div>
+            <!--
+            <a href="https://www.facebook.com/DPSMyanmar" target="_blank">FAQ</a>
+            <a href="https://share.hsforms.com/1M68BkpA8Te-AmtkJPGapvA3zr1h">Give us feedback</a>
+            -->
+            <div class="heading">
+                <span>Our Privacy & Policy</span>
+            </div>
+            <a href="https://dpsmap.com/pages/privacy-and-policy/">Privacy and Policy</a>
+<div class="">
+<br>
+                <!--<span>Our Valued Clients</span>-->
+            <a class="" href="https://dpsmap.com/valuedclients/"><span class="" style="color:yellow !important">Our Valued Clients</span></a>
+            </div>
+            
+        </div>
+        
+
+        <div class="right footer-content bg-dark p-3 shadow ">
+            <div class="heading">
+                <span>Office Address</span>
+            </div>
+            <a href="https://g.page/DPSMAP?share" class="address-container">
+                <span class="icon ">
+                    <i class="fa-solid fa-location-pin"></i></span>
+                <span>
+                    Rm:307, Yae Kyaw Complex, Yae Kyaw Road,<br />
+                    Pazundaung Township, Yangon, Myanmar (Burma)
+                </span>
+            </a>
+            <div class="address-container">
+                <span class="icon "><i class="fa-solid fa-phone"></i></span>
+                <span>
+                    <a href="tel:+959774204020">+95(09)774204020</a>
+                    <br />
+                    <a href="tel:+959775204020">+95(09) 775204020</a>
+                </span>
+            </div>
+            <a href="/cdn-cgi/l/email-protection#b1d5c1c2dcd0c1f1d6dcd0d8dd9fd2dedc" class="address-container">
+                <span class="icon ">
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+                <span> <span class="__cf_email__" data-cfemail="335743405e524373545e525a5f1d505c5e">[email&#160;protected]</span> </span>
+            </a>
+            <a href="/cdn-cgi/l/email-protection#debab39ebaaeadb3bfaef0bdb1b3" class="address-container">
+                <span class="icon ">
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+                <span> <span class="__cf_email__" data-cfemail="70141d301400031d11005e131f1d">[email&#160;protected]</span> </span>
+            </a>
+        </div>
+
+        <!--<div class="far-right footer-content">-->
+        <!--    <div class="heading">-->
+        <!--        <span>Subscribe Here</span>-->
+                <!--<div class="sub-heading">By entering your email, you are agreeing to our <a href="https://dpsmap.com/pages/privacy-and-policy/" class="text-primary">privacy policy.</a></div>-->
+        <!--                        <div class="sub-heading">Get exclusive access to map news , articles & updates on Technology</div>-->
+
+        <!--    </div>-->
+                <div class="far-right footer-content">
+            <div class="heading">
+                <!--<span>SUBSCRIBE FOR MAP UPDATES</span>-->
+                                <span>SUBSCRIBE HERE</span>
+
+                <!--<div class="sub-heading">By entering your email, you are agreeing to our <a href="https://dpsmap.com/pages/privacy-and-policy/" class="text-primary">privacy policy.</a></div>-->
+                                <div class="sub-heading">By entering your email, you will receive <span class="text-primary">the latest updates, offers, and features </span>about our Maps.
+
+</div>
+
+            </div>
+            <!--
+            <form action="#" method="post" class="address-container">
+                <label> Email *</label>
+                <input type="email" name="email" required />
+                <button type="submit" name="btn_submit">Submit</button>
+            </form>
+            -->
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+            hbspt.forms.create({
+            region: "na1",
+            portalId: "6706853",
+            formId: "f8cee9dd-822e-4036-aaa0-34a407e2834f"
+            });
+            </script>
+
+            
+            <!--QR-->
+            <div class="mt-5 ms-1"><a class="" href="https://dpsmap.com/">
+                    <!--<img src="/assets/images/dpsQR.png" alt="form105 Photo" class="responsive w-50 h-50"/></a>-->
+                                        <img src="/assets/images/OfficalDPS QR.png" alt="form105 Photo" class="responsive w-100 h-100"/></a>
+
+            </div>    
+            <!--<div class="mt-5 ms-5"><a class="" href="https://github.com/dpsmap/dpsmap.com">-->
+            <!--        <img src="/assets/images/github_qr-code.png" alt="form105 Photo" class="responsive w-25 h-25"/></a>-->
+            <!--</div>-->
+            
+        </div>
+    </div>
+</div>
+
+<div class="footer-credits">
+    
+    <div class="button-container">
+        <!--<a href="https://dpsmap.com/mapbox-busstop/index.php">-->
+        <!--    <button class="button"> Mapbox-busstop </button>-->
+        <!--</a>-->
+        <!--<a href="https://dpsmap.com/mapbox-busstop/hotel-list.php">-->
+        <!--    <button class="button"> Hotel List Map </button>-->
+        <!--</a>-->
+        <!--<a href="https://dpsmap.com/housenumbermap/">-->
+        <!--    <button class="button"> House Number Map </button>-->
+        <!--</a>-->
+        <!--<a href="https://dpsmap.com/carto/">-->
+        <!--    <button class="button"> Carto Map </button>-->
+        <!--</a>-->
+        <a href="https://dpsmap.com/1sqft/">
+            <button class="button"> 1SQFT Map </button>
+        </a>
+        <a href="https://dpsmap.com/populationmap/">
+            <button class="button"> Population Map </button>
+        </a>
+        <a href="https://dpsmap.com/industrial/">
+            <button class="button"> Industrial Zone Map </button>
+        </a>
+        <a href="https://dpsmap.com/administrative-boundaries/">
+            <button class="button"> administrative-boundaries </button>
+        </a>
+    </div>
+  
+    <div class="bg-img">
+        <div class="backdrop">
+            <div>© 2024 Design Printing Services Co. Ltd. All rights reserved. | Powered by DPS Map | Updated by AMO(02.Nov.2023) with ATP, AMO(12.Dec.2024) with <a href="https://github.com/Ch4Rmn">LHK</a>| Version
+            <a href="https://github.com/dpsmap/dpsmap.com">
+                <!--0.1(26.11.2024)-->
+                0.14(2.9.2025)
+                </a>
+            </div>
+        </div>
+        <img src="https://dpsmap.com/assets/images/footer.jpg" alt="footer-deco" />
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script>
+  // Get the button
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  // Show or hide the button when scrolling
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to the top when the button is clicked
+  scrollTopBtn.onclick = function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+</script>
+
+
+<center>
+    
+    <!-- Start of StatCounter Code for Dreamweaver ကိုကြီးနှင့် ေအာင်သက်ပိုင် တို့ ၃၀.၁.၂၀၂၃ တွင် ထည့်သည် -->
+        <script type="text/javascript">
+        var sc_project=310175;
+        var sc_invisible=0;
+        var sc_security="df515d3d";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript><div class="statcounter"><a title="web counter"
+        href="http://statcounter.com/" target="_blank"><img
+        class="statcounter"
+        src="//c.statcounter.com/310175/0/df515d3d/0/" alt="web
+        counter"></a></div></noscript>
+    </center>
+    <center>
+        <noscript></noscript>
+    </center>
+    <!-- End of StatCounter Code for Dreamweaver -->
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
+    <script src="data.js"></script>
+
+    <script>
+        let pageNum = 1;
+        const totalPages = geminiPages.length;
+
+        function renderPage(num) {
+            document.getElementById('page-content').textContent = geminiPages[num - 1];
+            document.getElementById('page-num').textContent = num;
+            document.getElementById('page-count').textContent = totalPages;
+        }
+
+        function nextPage() {
+            if (pageNum < totalPages) {
+                pageNum++;
+                renderPage(pageNum);
+            }
+        }
+
+        function prevPage() {
+            if (pageNum > 1) {
+                pageNum--;
+                renderPage(pageNum);
+            }
+        }
+
+        // Initial render
+        renderPage(pageNum);
+
+        // 
+
+        // var url = 'files/DPS_BusinessPlan.pdf';
+        // var pdfDoc = null;
+        // var pageNum = 1;
+        // var pageRendering = false;
+        // var pageNumPending = null;
+        // var scale = 1.5;
+        // var canvas = document.getElementById('pdf-canvas');
+        // var ctx = canvas.getContext('2d');
+
+        // function renderPage(num) {
+        //     pageRendering = true;
+        //     pdfDoc.getPage(num).then(function(page) {
+        //         var viewport = page.getViewport({
+        //             scale: scale
+        //         });
+        //         canvas.height = viewport.height;
+        //         canvas.width = viewport.width;
+
+        //         var renderContext = {
+        //             canvasContext: ctx,
+        //             viewport: viewport
+        //         };
+        //         var renderTask = page.render(renderContext);
+
+        //         renderTask.promise.then(function() {
+        //             pageRendering = false;
+        //             if (pageNumPending !== null) {
+        //                 renderPage(pageNumPending);
+        //                 pageNumPending = null;
+        //             }
+        //         });
+        //     });
+        //     document.getElementById('page-num').textContent = num;
+        // }
+
+        // function queueRenderPage(num) {
+        //     if (pageRendering) {
+        //         pageNumPending = num;
+        //     } else {
+        //         renderPage(num);
+        //     }
+        // }
+
+        // function nextPage() {
+        //     if (pageNum >= pdfDoc.numPages) {
+        //         return;
+        //     }
+        //     pageNum++;
+        //     queueRenderPage(pageNum);
+        // }
+
+        // function prevPage() {
+        //     if (pageNum <= 1) {
+        //         return;
+        //     }
+        //     pageNum--;
+        //     queueRenderPage(pageNum);
+        // }
+
+        // pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+        //     pdfDoc = pdfDoc_;
+        //     document.getElementById('page-count').textContent = pdfDoc.numPages;
+        //     renderPage(pageNum);
+        // });
+    </script>
+
+    <!-- Fontawesome -->
+    <script src="/assets/libs/fontawesome/js/all.min.js" type="text/javascript"></script>
+
+    <!-- Custom js -->
+    <script src="/assets/js/script.js" type="text/javascript"></script>
+    <script src="/assets/js/jsResponsive.js" type="text/javascript"></script>
+
+    <!-- App -->
+    <script src="/assets/js/app.js" type="text/javascript"></script>
+
+
+    <!-- Analytics -->
+    <script src="/assets/js/analytics.js" type="text/javascript"></script>
+</body>
+
+</html>
