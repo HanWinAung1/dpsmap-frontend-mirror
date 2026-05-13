@@ -1,0 +1,6 @@
+.git
+.gitignore
+docs/wget*.log
+docs/controlled_seed_urls.txt
+*.bundle
+*.tar.gz
