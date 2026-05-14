@@ -1,5 +1,0 @@
-address.dpsmap.com
-dpsmap.com
-eshop.dpsmap.com
-myanmar.dpsmap.com
-shop.dpsmap.com
